@@ -1,0 +1,112 @@
+/* ==UserStyle==
+@name         Enable CJK text layout features
+@version      1.0
+@namespace    Coelacanthus
+@homepageURL  https://github.com/CoelacanthusHex/userstyles
+@supportURL  https://github.com/CoelacanthusHex/userstyles/issues
+@description  CSS Text Module 4 adds some CJK text layout features, such as text-spacing-trim, text-autospace, and hanging-punctuation, but browsers disable these features by default. This UserCSS enables them back. (And leave them disable for verbatim environment like pre, code, samp, kbd, tt, and var.) For text-autospace, we use replace behavior instead of insert behavior because it works better for old pages with spaces inserted manually, we use it when available.
+@author       Coelacanthus
+@license      MPL-2.0
+SPDX-FileCopyrightText: Coelacanthus
+SPDX-License-Identifier: MPL-2.0
+==/UserStyle== */
+@-moz-document regexp(".*") {
+    /*
+     * https://drafts.csswg.org/css-text-4/#text-autospace-property
+     * Browsers changed initial value from normal to no-autospace.
+     * See https://bugzilla.mozilla.org/show_bug.cgi?id=1987997
+     * and https://github.com/w3c/csswg-drafts/issues/12386
+     */
+    @supports (text-autospace: replace) {
+        body {
+            /* 'normal' but with 'replace' instead 'insert' */
+            text-autospace: ideograph-alpha ideograph-numeric replace;
+        }
+    }
+    @supports (not (text-autospace: replace)) and (text-autospace: insert) and (text-autospace: normal) {
+        body {
+            text-autospace: normal;
+        }
+    }
+    @supports (text-autospace: no-autospace) {
+        /*
+         * There elements do verbatim environment job in HTML. It may be better to not modify its format.
+         * Although the current standard use inherit behavior for these elements.
+         */
+        pre,
+        code,
+        pre > code,
+        samp,
+        kbd,
+        tt,
+        var {
+            text-autospace: no-autospace;
+        }
+        /* TODO: An issue is text in input textarea will looks like have more U+0020 SPACE. */
+        /* TODO: Another issue is the text in input area will jump left and right if you use preedit. */
+    }
+
+    /*
+     * https://drafts.csswg.org/css-text-4/#text-spacing-trim-property
+     * https://bugzilla.mozilla.org/show_bug.cgi?id=1951795
+     */
+    @supports (text-spacing-trim: normal) {
+        body {
+            /* normal 是宽松风格，trim-both 是严格风格 */
+            text-spacing-trim: normal;
+        }
+        /*
+        * There elements do verbatim environment job in HTML. It may be better to not modify its format.
+        * Although the current standard use inherit behavior for these elements.
+        */
+        pre,
+        code,
+        pre > code,
+        samp,
+        kbd,
+        tt,
+        var {
+            text-spacing-trim: space-all;
+        }
+        /* TODO: Another issue is the text in input area will jump left and right if you use preedit. */
+    }
+    
+    /* 
+     * https://drafts.csswg.org/css-text-4/#hanging-punctuation-property
+     * https://bugzilla.mozilla.org/show_bug.cgi?id=1986660
+     * https://bugzilla.mozilla.org/show_bug.cgi?id=1986658
+     * https://www.thetype.com/2017/11/13290/
+     */
+    @supports (hanging-punctuation: first) and (hanging-punctuation: allow-end) and selector(:lang(zh)) {
+        /* 中文标点悬挂实际上是为了避头尾，故仅在行尾对逗号句号等标点应用 */
+        /* Other languages have their own different hanging rule, only apply to CJK. */
+        body:lang(zh, ja, ko) {
+            hanging-punctuation: allow-end;
+        }
+        /*
+         * There elements do verbatim environment job in HTML. It may be better to not modify its format.
+         * Although the current standard use inherit behavior for these elements.
+         */
+        pre,
+        code,
+        pre > code,
+        samp,
+        kbd,
+        tt,
+        var {
+            hanging-punctuation: none;
+        }
+    }
+    
+    /* 
+    * https://drafts.csswg.org/css-text-4/#word-break-property
+    * https://bugzilla.mozilla.org/show_bug.cgi?id=1852479
+    */
+    @supports (word-break: auto-phrase) {
+        body {
+            word-break: auto-phrase;
+        }
+        /* Only control how to break but not whether to break, so no need to reset for verbatim environment. */
+    }
+}
+/* vim: set ts=4 sts=4 sw=4 et: */
