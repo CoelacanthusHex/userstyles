@@ -1,0 +1,357 @@
+/* ==UserStyle==
+@name           Enable Iosevka language-specific ligation sets
+@version        1.0.0
+@description    Enable Iosevka language-specific ligation sets for code elements.
+@namespace      Coelacanthus
+@homepageURL    https://github.com/CoelacanthusHex/userstyles
+@supportURL     https://github.com/CoelacanthusHex/userstyles/issues
+@author         Coelacanthus
+@license        MPL-2.0
+SPDX-FileCopyrightText: Coelacanthus
+SPDX-License-Identifier: MPL-2.0
+==/UserStyle== */
+@-moz-document regexp(".*") {
+    /* https://github.com/be5invis/Iosevka/blob/main/doc/language-specific-ligation-sets.md */
+    :is([class~="highlighted-c" i], [class~="highlighted-cpp" i], [class~="highlighted-cc" i], [class~="highlighted-c++" i], [class~="highlighted-h++" i], [class~="highlighted-hpp" i], [class~="highlighted-hh" i], [class~="highlighted-hxx" i], [class~="highlighted-cxx" i], [class~="language-c" i], [class~="language-cpp" i], [class~="language-cc" i], [class~="language-c++" i], [class~="language-h++" i], [class~="language-hpp" i], [class~="language-hh" i], [class~="language-hxx" i], [class~="language-cxx" i], [class~="mw-highlight-lang-c" i], [class~="mw-highlight-lang-cpp" i], [class~="mw-highlight-lang-cc" i], [class~="mw-highlight-lang-c++" i], [class~="mw-highlight-lang-h++" i], [class~="mw-highlight-lang-hpp" i], [class~="mw-highlight-lang-hh" i], [class~="mw-highlight-lang-hxx" i], [class~="mw-highlight-lang-cxx" i], [class~="shj-lang-c" i], [class~="shj-lang-cpp" i], [class~="shj-lang-cc" i], [class~="shj-lang-c++" i], [class~="shj-lang-h++" i], [class~="shj-lang-hpp" i], [class~="shj-lang-hh" i], [class~="shj-lang-hxx" i], [class~="shj-lang-cxx" i], [class~="highlight-source-c" i], [class~="highlight-source-cpp" i], [class~="highlight-source-cc" i], [class~="highlight-source-c++" i], [class~="highlight-source-h++" i], [class~="highlight-source-hpp" i], [class~="highlight-source-hh" i], [class~="highlight-source-hxx" i], [class~="highlight-source-cxx" i]) :is(pre, code, textarea),
+    :is(pre, code):is([class~="highlighted-c" i], [class~="highlighted-cpp" i], [class~="highlighted-cc" i], [class~="highlighted-c++" i], [class~="highlighted-h++" i], [class~="highlighted-hpp" i], [class~="highlighted-hh" i], [class~="highlighted-hxx" i], [class~="highlighted-cxx" i], [class~="language-c" i], [class~="language-cpp" i], [class~="language-cc" i], [class~="language-c++" i], [class~="language-h++" i], [class~="language-hpp" i], [class~="language-hh" i], [class~="language-hxx" i], [class~="language-cxx" i], [class~="mw-highlight-lang-c" i], [class~="mw-highlight-lang-cpp" i], [class~="mw-highlight-lang-cc" i], [class~="mw-highlight-lang-c++" i], [class~="mw-highlight-lang-h++" i], [class~="mw-highlight-lang-hpp" i], [class~="mw-highlight-lang-hh" i], [class~="mw-highlight-lang-hxx" i], [class~="mw-highlight-lang-cxx" i], [class~="shj-lang-c" i], [class~="shj-lang-cpp" i], [class~="shj-lang-cc" i], [class~="shj-lang-c++" i], [class~="shj-lang-h++" i], [class~="shj-lang-hpp" i], [class~="shj-lang-hh" i], [class~="shj-lang-hxx" i], [class~="shj-lang-cxx" i], [class~="highlight-source-c" i], [class~="highlight-source-cpp" i], [class~="highlight-source-cc" i], [class~="highlight-source-c++" i], [class~="highlight-source-h++" i], [class~="highlight-source-hpp" i], [class~="highlight-source-hh" i], [class~="highlight-source-hxx" i], [class~="highlight-source-cxx" i]) {
+        font-feature-settings: "calt" off, "CLIK" on;
+    }
+    :is([class~="c-file-line" i], [class~="cpp-file-line" i], [class~="cc-file-line" i], [class~="c++-file-line" i], [class~="h++-file-line" i], [class~="hpp-file-line" i], [class~="hh-file-line" i], [class~="hxx-file-line" i], [class~="cxx-file-line" i]) :is(pre, code, textarea),
+    :is(pre, code):is([class~="c-file-line" i], [class~="cpp-file-line" i], [class~="cc-file-line" i], [class~="c++-file-line" i], [class~="h++-file-line" i], [class~="hpp-file-line" i], [class~="hh-file-line" i], [class~="hxx-file-line" i], [class~="cxx-file-line" i]) {
+        font-feature-settings: "calt" off, "CLIK" on;
+    }
+    :is([data-langdata-language~="c" i], [data-langdata-language~="cpp" i], [data-langdata-language~="cc" i], [data-langdata-language~="c++" i], [data-langdata-language~="h++" i], [data-langdata-language~="hpp" i], [data-langdata-language~="hh" i], [data-langdata-language~="hxx" i], [data-langdata-language~="cxx" i]) :is(pre, code, textarea),
+    :is(pre, code):is([data-langdata-language~="c" i], [data-langdata-language~="cpp" i], [data-langdata-language~="cc" i], [data-langdata-language~="c++" i], [data-langdata-language~="h++" i], [data-langdata-language~="hpp" i], [data-langdata-language~="hh" i], [data-langdata-language~="hxx" i], [data-langdata-language~="cxx" i]) {
+        font-feature-settings: "calt" off, "CLIK" on;
+    }
+    :is([class~="hljs" i][class~="c" i], [class~="hljs" i][class~="cpp" i], [class~="hljs" i][class~="cc" i], [class~="hljs" i][class~="c++" i], [class~="hljs" i][class~="h++" i], [class~="hljs" i][class~="hpp" i], [class~="hljs" i][class~="hh" i], [class~="hljs" i][class~="hxx" i], [class~="hljs" i][class~="cxx" i], [class~="highlight" i][class~="c" i], [class~="highlight" i][class~="cpp" i], [class~="highlight" i][class~="cc" i], [class~="highlight" i][class~="c++" i], [class~="highlight" i][class~="h++" i], [class~="highlight" i][class~="hpp" i], [class~="highlight" i][class~="hh" i], [class~="highlight" i][class~="hxx" i], [class~="highlight" i][class~="cxx" i]) :is(pre, code, textarea),
+    :is(pre, code):is([class~="hljs" i][class~="c" i], [class~="hljs" i][class~="cpp" i], [class~="hljs" i][class~="cc" i], [class~="hljs" i][class~="c++" i], [class~="hljs" i][class~="h++" i], [class~="hljs" i][class~="hpp" i], [class~="hljs" i][class~="hh" i], [class~="hljs" i][class~="hxx" i], [class~="hljs" i][class~="cxx" i], [class~="highlight" i][class~="c" i], [class~="highlight" i][class~="cpp" i], [class~="highlight" i][class~="cc" i], [class~="highlight" i][class~="c++" i], [class~="highlight" i][class~="h++" i], [class~="highlight" i][class~="hpp" i], [class~="highlight" i][class~="hh" i], [class~="highlight" i][class~="hxx" i], [class~="highlight" i][class~="cxx" i]) {
+        font-feature-settings: "calt" off, "CLIK" on;
+    }
+    pre[class~="highlight" i] [lang~="c" i], pre[class~="highlight" i] [lang~="cpp" i], pre[class~="highlight" i] [lang~="cc" i], pre[class~="highlight" i] [lang~="c++" i], pre[class~="highlight" i] [lang~="h++" i], pre[class~="highlight" i] [lang~="hpp" i], pre[class~="highlight" i] [lang~="hh" i], pre[class~="highlight" i] [lang~="hxx" i], pre[class~="highlight" i] [lang~="cxx" i] {
+        font-feature-settings: "calt" off, "CLIK" on;
+    }
+    :is([class~="highlighted-javascript" i], [class~="highlighted-js" i], [class~="highlighted-jsx" i], [class~="highlighted-mjs" i], [class~="highlighted-cjs" i], [class~="highlighted-typescript" i], [class~="highlighted-ts" i], [class~="highlighted-tsx" i], [class~="highlighted-mts" i], [class~="highlighted-cts" i], [class~="language-javascript" i], [class~="language-js" i], [class~="language-jsx" i], [class~="language-mjs" i], [class~="language-cjs" i], [class~="language-typescript" i], [class~="language-ts" i], [class~="language-tsx" i], [class~="language-mts" i], [class~="language-cts" i], [class~="mw-highlight-lang-javascript" i], [class~="mw-highlight-lang-js" i], [class~="mw-highlight-lang-jsx" i], [class~="mw-highlight-lang-mjs" i], [class~="mw-highlight-lang-cjs" i], [class~="mw-highlight-lang-typescript" i], [class~="mw-highlight-lang-ts" i], [class~="mw-highlight-lang-tsx" i], [class~="mw-highlight-lang-mts" i], [class~="mw-highlight-lang-cts" i], [class~="shj-lang-javascript" i], [class~="shj-lang-js" i], [class~="shj-lang-jsx" i], [class~="shj-lang-mjs" i], [class~="shj-lang-cjs" i], [class~="shj-lang-typescript" i], [class~="shj-lang-ts" i], [class~="shj-lang-tsx" i], [class~="shj-lang-mts" i], [class~="shj-lang-cts" i], [class~="highlight-source-javascript" i], [class~="highlight-source-js" i], [class~="highlight-source-jsx" i], [class~="highlight-source-mjs" i], [class~="highlight-source-cjs" i], [class~="highlight-source-typescript" i], [class~="highlight-source-ts" i], [class~="highlight-source-tsx" i], [class~="highlight-source-mts" i], [class~="highlight-source-cts" i]) :is(pre, code, textarea),
+    :is(pre, code):is([class~="highlighted-javascript" i], [class~="highlighted-js" i], [class~="highlighted-jsx" i], [class~="highlighted-mjs" i], [class~="highlighted-cjs" i], [class~="highlighted-typescript" i], [class~="highlighted-ts" i], [class~="highlighted-tsx" i], [class~="highlighted-mts" i], [class~="highlighted-cts" i], [class~="language-javascript" i], [class~="language-js" i], [class~="language-jsx" i], [class~="language-mjs" i], [class~="language-cjs" i], [class~="language-typescript" i], [class~="language-ts" i], [class~="language-tsx" i], [class~="language-mts" i], [class~="language-cts" i], [class~="mw-highlight-lang-javascript" i], [class~="mw-highlight-lang-js" i], [class~="mw-highlight-lang-jsx" i], [class~="mw-highlight-lang-mjs" i], [class~="mw-highlight-lang-cjs" i], [class~="mw-highlight-lang-typescript" i], [class~="mw-highlight-lang-ts" i], [class~="mw-highlight-lang-tsx" i], [class~="mw-highlight-lang-mts" i], [class~="mw-highlight-lang-cts" i], [class~="shj-lang-javascript" i], [class~="shj-lang-js" i], [class~="shj-lang-jsx" i], [class~="shj-lang-mjs" i], [class~="shj-lang-cjs" i], [class~="shj-lang-typescript" i], [class~="shj-lang-ts" i], [class~="shj-lang-tsx" i], [class~="shj-lang-mts" i], [class~="shj-lang-cts" i], [class~="highlight-source-javascript" i], [class~="highlight-source-js" i], [class~="highlight-source-jsx" i], [class~="highlight-source-mjs" i], [class~="highlight-source-cjs" i], [class~="highlight-source-typescript" i], [class~="highlight-source-ts" i], [class~="highlight-source-tsx" i], [class~="highlight-source-mts" i], [class~="highlight-source-cts" i]) {
+        font-feature-settings: "calt" off, "JSPT" on;
+    }
+    :is([class~="javascript-file-line" i], [class~="js-file-line" i], [class~="jsx-file-line" i], [class~="mjs-file-line" i], [class~="cjs-file-line" i], [class~="typescript-file-line" i], [class~="ts-file-line" i], [class~="tsx-file-line" i], [class~="mts-file-line" i], [class~="cts-file-line" i]) :is(pre, code, textarea),
+    :is(pre, code):is([class~="javascript-file-line" i], [class~="js-file-line" i], [class~="jsx-file-line" i], [class~="mjs-file-line" i], [class~="cjs-file-line" i], [class~="typescript-file-line" i], [class~="ts-file-line" i], [class~="tsx-file-line" i], [class~="mts-file-line" i], [class~="cts-file-line" i]) {
+        font-feature-settings: "calt" off, "JSPT" on;
+    }
+    :is([data-langdata-language~="javascript" i], [data-langdata-language~="js" i], [data-langdata-language~="jsx" i], [data-langdata-language~="mjs" i], [data-langdata-language~="cjs" i], [data-langdata-language~="typescript" i], [data-langdata-language~="ts" i], [data-langdata-language~="tsx" i], [data-langdata-language~="mts" i], [data-langdata-language~="cts" i]) :is(pre, code, textarea),
+    :is(pre, code):is([data-langdata-language~="javascript" i], [data-langdata-language~="js" i], [data-langdata-language~="jsx" i], [data-langdata-language~="mjs" i], [data-langdata-language~="cjs" i], [data-langdata-language~="typescript" i], [data-langdata-language~="ts" i], [data-langdata-language~="tsx" i], [data-langdata-language~="mts" i], [data-langdata-language~="cts" i]) {
+        font-feature-settings: "calt" off, "JSPT" on;
+    }
+    :is([class~="hljs" i][class~="javascript" i], [class~="hljs" i][class~="js" i], [class~="hljs" i][class~="jsx" i], [class~="hljs" i][class~="mjs" i], [class~="hljs" i][class~="cjs" i], [class~="hljs" i][class~="typescript" i], [class~="hljs" i][class~="ts" i], [class~="hljs" i][class~="tsx" i], [class~="hljs" i][class~="mts" i], [class~="hljs" i][class~="cts" i], [class~="highlight" i][class~="javascript" i], [class~="highlight" i][class~="js" i], [class~="highlight" i][class~="jsx" i], [class~="highlight" i][class~="mjs" i], [class~="highlight" i][class~="cjs" i], [class~="highlight" i][class~="typescript" i], [class~="highlight" i][class~="ts" i], [class~="highlight" i][class~="tsx" i], [class~="highlight" i][class~="mts" i], [class~="highlight" i][class~="cts" i]) :is(pre, code, textarea),
+    :is(pre, code):is([class~="hljs" i][class~="javascript" i], [class~="hljs" i][class~="js" i], [class~="hljs" i][class~="jsx" i], [class~="hljs" i][class~="mjs" i], [class~="hljs" i][class~="cjs" i], [class~="hljs" i][class~="typescript" i], [class~="hljs" i][class~="ts" i], [class~="hljs" i][class~="tsx" i], [class~="hljs" i][class~="mts" i], [class~="hljs" i][class~="cts" i], [class~="highlight" i][class~="javascript" i], [class~="highlight" i][class~="js" i], [class~="highlight" i][class~="jsx" i], [class~="highlight" i][class~="mjs" i], [class~="highlight" i][class~="cjs" i], [class~="highlight" i][class~="typescript" i], [class~="highlight" i][class~="ts" i], [class~="highlight" i][class~="tsx" i], [class~="highlight" i][class~="mts" i], [class~="highlight" i][class~="cts" i]) {
+        font-feature-settings: "calt" off, "JSPT" on;
+    }
+    pre[class~="highlight" i] [lang~="javascript" i], pre[class~="highlight" i] [lang~="js" i], pre[class~="highlight" i] [lang~="jsx" i], pre[class~="highlight" i] [lang~="mjs" i], pre[class~="highlight" i] [lang~="cjs" i], pre[class~="highlight" i] [lang~="typescript" i], pre[class~="highlight" i] [lang~="ts" i], pre[class~="highlight" i] [lang~="tsx" i], pre[class~="highlight" i] [lang~="mts" i], pre[class~="highlight" i] [lang~="cts" i] {
+        font-feature-settings: "calt" off, "JSPT" on;
+    }
+    :is([class~="highlighted-php" i], [class~="language-php" i], [class~="mw-highlight-lang-php" i], [class~="shj-lang-php" i], [class~="highlight-source-php" i]) :is(pre, code, textarea),
+    :is(pre, code):is([class~="highlighted-php" i], [class~="language-php" i], [class~="mw-highlight-lang-php" i], [class~="shj-lang-php" i], [class~="highlight-source-php" i]) {
+        font-feature-settings: "calt" off, "PHPX" on;
+    }
+    :is([class~="php-file-line" i]) :is(pre, code, textarea),
+    :is(pre, code):is([class~="php-file-line" i]) {
+        font-feature-settings: "calt" off, "PHPX" on;
+    }
+    :is([data-langdata-language~="php" i]) :is(pre, code, textarea),
+    :is(pre, code):is([data-langdata-language~="php" i]) {
+        font-feature-settings: "calt" off, "PHPX" on;
+    }
+    :is([class~="hljs" i][class~="php" i], [class~="highlight" i][class~="php" i]) :is(pre, code, textarea),
+    :is(pre, code):is([class~="hljs" i][class~="php" i], [class~="highlight" i][class~="php" i]) {
+        font-feature-settings: "calt" off, "PHPX" on;
+    }
+    pre[class~="highlight" i] [lang~="php" i] {
+        font-feature-settings: "calt" off, "PHPX" on;
+    }
+    :is([class~="highlighted-julia" i], [class~="language-julia" i], [class~="mw-highlight-lang-julia" i], [class~="shj-lang-julia" i], [class~="highlight-source-julia" i]) :is(pre, code, textarea),
+    :is(pre, code):is([class~="highlighted-julia" i], [class~="language-julia" i], [class~="mw-highlight-lang-julia" i], [class~="shj-lang-julia" i], [class~="highlight-source-julia" i]) {
+        font-feature-settings: "calt" off, "JLIA" on;
+    }
+    :is([class~="julia-file-line" i]) :is(pre, code, textarea),
+    :is(pre, code):is([class~="julia-file-line" i]) {
+        font-feature-settings: "calt" off, "JLIA" on;
+    }
+    :is([data-langdata-language~="julia" i]) :is(pre, code, textarea),
+    :is(pre, code):is([data-langdata-language~="julia" i]) {
+        font-feature-settings: "calt" off, "JLIA" on;
+    }
+    :is([class~="hljs" i][class~="julia" i], [class~="highlight" i][class~="julia" i]) :is(pre, code, textarea),
+    :is(pre, code):is([class~="hljs" i][class~="julia" i], [class~="highlight" i][class~="julia" i]) {
+        font-feature-settings: "calt" off, "JLIA" on;
+    }
+    pre[class~="highlight" i] [lang~="julia" i] {
+        font-feature-settings: "calt" off, "JLIA" on;
+    }
+    :is([class~="highlighted-raku" i], [class~="language-raku" i], [class~="mw-highlight-lang-raku" i], [class~="shj-lang-raku" i], [class~="highlight-source-raku" i]) :is(pre, code, textarea),
+    :is(pre, code):is([class~="highlighted-raku" i], [class~="language-raku" i], [class~="mw-highlight-lang-raku" i], [class~="shj-lang-raku" i], [class~="highlight-source-raku" i]) {
+        font-feature-settings: "calt" off, "RAKU" on;
+    }
+    :is([class~="raku-file-line" i]) :is(pre, code, textarea),
+    :is(pre, code):is([class~="raku-file-line" i]) {
+        font-feature-settings: "calt" off, "RAKU" on;
+    }
+    :is([data-langdata-language~="raku" i]) :is(pre, code, textarea),
+    :is(pre, code):is([data-langdata-language~="raku" i]) {
+        font-feature-settings: "calt" off, "RAKU" on;
+    }
+    :is([class~="hljs" i][class~="raku" i], [class~="highlight" i][class~="raku" i]) :is(pre, code, textarea),
+    :is(pre, code):is([class~="hljs" i][class~="raku" i], [class~="highlight" i][class~="raku" i]) {
+        font-feature-settings: "calt" off, "RAKU" on;
+    }
+    pre[class~="highlight" i] [lang~="raku" i] {
+        font-feature-settings: "calt" off, "RAKU" on;
+    }
+    :is([class~="highlighted-sml" i], [class~="highlighted-smlnj" i], [class~="highlighted-ml" i], [class~="language-sml" i], [class~="language-smlnj" i], [class~="language-ml" i], [class~="mw-highlight-lang-sml" i], [class~="mw-highlight-lang-smlnj" i], [class~="mw-highlight-lang-ml" i], [class~="shj-lang-sml" i], [class~="shj-lang-smlnj" i], [class~="shj-lang-ml" i], [class~="highlight-source-sml" i], [class~="highlight-source-smlnj" i], [class~="highlight-source-ml" i]) :is(pre, code, textarea),
+    :is(pre, code):is([class~="highlighted-sml" i], [class~="highlighted-smlnj" i], [class~="highlighted-ml" i], [class~="language-sml" i], [class~="language-smlnj" i], [class~="language-ml" i], [class~="mw-highlight-lang-sml" i], [class~="mw-highlight-lang-smlnj" i], [class~="mw-highlight-lang-ml" i], [class~="shj-lang-sml" i], [class~="shj-lang-smlnj" i], [class~="shj-lang-ml" i], [class~="highlight-source-sml" i], [class~="highlight-source-smlnj" i], [class~="highlight-source-ml" i]) {
+        font-feature-settings: "calt" off, "MLXX" on;
+    }
+    :is([class~="sml-file-line" i], [class~="smlnj-file-line" i], [class~="ml-file-line" i]) :is(pre, code, textarea),
+    :is(pre, code):is([class~="sml-file-line" i], [class~="smlnj-file-line" i], [class~="ml-file-line" i]) {
+        font-feature-settings: "calt" off, "MLXX" on;
+    }
+    :is([data-langdata-language~="sml" i], [data-langdata-language~="smlnj" i], [data-langdata-language~="ml" i]) :is(pre, code, textarea),
+    :is(pre, code):is([data-langdata-language~="sml" i], [data-langdata-language~="smlnj" i], [data-langdata-language~="ml" i]) {
+        font-feature-settings: "calt" off, "MLXX" on;
+    }
+    :is([class~="hljs" i][class~="sml" i], [class~="hljs" i][class~="smlnj" i], [class~="hljs" i][class~="ml" i], [class~="highlight" i][class~="sml" i], [class~="highlight" i][class~="smlnj" i], [class~="highlight" i][class~="ml" i]) :is(pre, code, textarea),
+    :is(pre, code):is([class~="hljs" i][class~="sml" i], [class~="hljs" i][class~="smlnj" i], [class~="hljs" i][class~="ml" i], [class~="highlight" i][class~="sml" i], [class~="highlight" i][class~="smlnj" i], [class~="highlight" i][class~="ml" i]) {
+        font-feature-settings: "calt" off, "MLXX" on;
+    }
+    pre[class~="highlight" i] [lang~="sml" i], pre[class~="highlight" i] [lang~="smlnj" i], pre[class~="highlight" i] [lang~="ml" i] {
+        font-feature-settings: "calt" off, "MLXX" on;
+    }
+    :is([class~="highlighted-fsharp" i], [class~="highlighted-fs" i], [class~="highlighted-f#" i], [class~="language-fsharp" i], [class~="language-fs" i], [class~="language-f#" i], [class~="mw-highlight-lang-fsharp" i], [class~="mw-highlight-lang-fs" i], [class~="mw-highlight-lang-f#" i], [class~="shj-lang-fsharp" i], [class~="shj-lang-fs" i], [class~="shj-lang-f#" i], [class~="highlight-source-fsharp" i], [class~="highlight-source-fs" i], [class~="highlight-source-f#" i]) :is(pre, code, textarea),
+    :is(pre, code):is([class~="highlighted-fsharp" i], [class~="highlighted-fs" i], [class~="highlighted-f#" i], [class~="language-fsharp" i], [class~="language-fs" i], [class~="language-f#" i], [class~="mw-highlight-lang-fsharp" i], [class~="mw-highlight-lang-fs" i], [class~="mw-highlight-lang-f#" i], [class~="shj-lang-fsharp" i], [class~="shj-lang-fs" i], [class~="shj-lang-f#" i], [class~="highlight-source-fsharp" i], [class~="highlight-source-fs" i], [class~="highlight-source-f#" i]) {
+        font-feature-settings: "calt" off, "FSHP" on;
+    }
+    :is([class~="fsharp-file-line" i], [class~="fs-file-line" i], [class~="f#-file-line" i]) :is(pre, code, textarea),
+    :is(pre, code):is([class~="fsharp-file-line" i], [class~="fs-file-line" i], [class~="f#-file-line" i]) {
+        font-feature-settings: "calt" off, "FSHP" on;
+    }
+    :is([data-langdata-language~="fsharp" i], [data-langdata-language~="fs" i], [data-langdata-language~="f#" i]) :is(pre, code, textarea),
+    :is(pre, code):is([data-langdata-language~="fsharp" i], [data-langdata-language~="fs" i], [data-langdata-language~="f#" i]) {
+        font-feature-settings: "calt" off, "FSHP" on;
+    }
+    :is([class~="hljs" i][class~="fsharp" i], [class~="hljs" i][class~="fs" i], [class~="hljs" i][class~="f#" i], [class~="highlight" i][class~="fsharp" i], [class~="highlight" i][class~="fs" i], [class~="highlight" i][class~="f#" i]) :is(pre, code, textarea),
+    :is(pre, code):is([class~="hljs" i][class~="fsharp" i], [class~="hljs" i][class~="fs" i], [class~="hljs" i][class~="f#" i], [class~="highlight" i][class~="fsharp" i], [class~="highlight" i][class~="fs" i], [class~="highlight" i][class~="f#" i]) {
+        font-feature-settings: "calt" off, "FSHP" on;
+    }
+    pre[class~="highlight" i] [lang~="fsharp" i], pre[class~="highlight" i] [lang~="fs" i], pre[class~="highlight" i] [lang~="f#" i] {
+        font-feature-settings: "calt" off, "FSHP" on;
+    }
+    :is([class~="highlighted-fstar" i], [class~="language-fstar" i], [class~="mw-highlight-lang-fstar" i], [class~="shj-lang-fstar" i], [class~="highlight-source-fstar" i]) :is(pre, code, textarea),
+    :is(pre, code):is([class~="highlighted-fstar" i], [class~="language-fstar" i], [class~="mw-highlight-lang-fstar" i], [class~="shj-lang-fstar" i], [class~="highlight-source-fstar" i]) {
+        font-feature-settings: "calt" off, "FSTA" on;
+    }
+    :is([class~="fstar-file-line" i]) :is(pre, code, textarea),
+    :is(pre, code):is([class~="fstar-file-line" i]) {
+        font-feature-settings: "calt" off, "FSTA" on;
+    }
+    :is([data-langdata-language~="fstar" i]) :is(pre, code, textarea),
+    :is(pre, code):is([data-langdata-language~="fstar" i]) {
+        font-feature-settings: "calt" off, "FSTA" on;
+    }
+    :is([class~="hljs" i][class~="fstar" i], [class~="highlight" i][class~="fstar" i]) :is(pre, code, textarea),
+    :is(pre, code):is([class~="hljs" i][class~="fstar" i], [class~="highlight" i][class~="fstar" i]) {
+        font-feature-settings: "calt" off, "FSTA" on;
+    }
+    pre[class~="highlight" i] [lang~="fstar" i] {
+        font-feature-settings: "calt" off, "FSTA" on;
+    }
+    :is([class~="highlighted-haskell" i], [class~="highlighted-hs" i], [class~="language-haskell" i], [class~="language-hs" i], [class~="mw-highlight-lang-haskell" i], [class~="mw-highlight-lang-hs" i], [class~="shj-lang-haskell" i], [class~="shj-lang-hs" i], [class~="highlight-source-haskell" i], [class~="highlight-source-hs" i]) :is(pre, code, textarea),
+    :is(pre, code):is([class~="highlighted-haskell" i], [class~="highlighted-hs" i], [class~="language-haskell" i], [class~="language-hs" i], [class~="mw-highlight-lang-haskell" i], [class~="mw-highlight-lang-hs" i], [class~="shj-lang-haskell" i], [class~="shj-lang-hs" i], [class~="highlight-source-haskell" i], [class~="highlight-source-hs" i]) {
+        font-feature-settings: "calt" off, "HSKL" on;
+    }
+    :is([class~="haskell-file-line" i], [class~="hs-file-line" i]) :is(pre, code, textarea),
+    :is(pre, code):is([class~="haskell-file-line" i], [class~="hs-file-line" i]) {
+        font-feature-settings: "calt" off, "HSKL" on;
+    }
+    :is([data-langdata-language~="haskell" i], [data-langdata-language~="hs" i]) :is(pre, code, textarea),
+    :is(pre, code):is([data-langdata-language~="haskell" i], [data-langdata-language~="hs" i]) {
+        font-feature-settings: "calt" off, "HSKL" on;
+    }
+    :is([class~="hljs" i][class~="haskell" i], [class~="hljs" i][class~="hs" i], [class~="highlight" i][class~="haskell" i], [class~="highlight" i][class~="hs" i]) :is(pre, code, textarea),
+    :is(pre, code):is([class~="hljs" i][class~="haskell" i], [class~="hljs" i][class~="hs" i], [class~="highlight" i][class~="haskell" i], [class~="highlight" i][class~="hs" i]) {
+        font-feature-settings: "calt" off, "HSKL" on;
+    }
+    pre[class~="highlight" i] [lang~="haskell" i], pre[class~="highlight" i] [lang~="hs" i] {
+        font-feature-settings: "calt" off, "HSKL" on;
+    }
+    :is([class~="highlighted-idris" i], [class~="highlighted-idr" i], [class~="language-idris" i], [class~="language-idr" i], [class~="mw-highlight-lang-idris" i], [class~="mw-highlight-lang-idr" i], [class~="shj-lang-idris" i], [class~="shj-lang-idr" i], [class~="highlight-source-idris" i], [class~="highlight-source-idr" i]) :is(pre, code, textarea),
+    :is(pre, code):is([class~="highlighted-idris" i], [class~="highlighted-idr" i], [class~="language-idris" i], [class~="language-idr" i], [class~="mw-highlight-lang-idris" i], [class~="mw-highlight-lang-idr" i], [class~="shj-lang-idris" i], [class~="shj-lang-idr" i], [class~="highlight-source-idris" i], [class~="highlight-source-idr" i]) {
+        font-feature-settings: "calt" off, "IDRS" on;
+    }
+    :is([class~="idris-file-line" i], [class~="idr-file-line" i]) :is(pre, code, textarea),
+    :is(pre, code):is([class~="idris-file-line" i], [class~="idr-file-line" i]) {
+        font-feature-settings: "calt" off, "IDRS" on;
+    }
+    :is([data-langdata-language~="idris" i], [data-langdata-language~="idr" i]) :is(pre, code, textarea),
+    :is(pre, code):is([data-langdata-language~="idris" i], [data-langdata-language~="idr" i]) {
+        font-feature-settings: "calt" off, "IDRS" on;
+    }
+    :is([class~="hljs" i][class~="idris" i], [class~="hljs" i][class~="idr" i], [class~="highlight" i][class~="idris" i], [class~="highlight" i][class~="idr" i]) :is(pre, code, textarea),
+    :is(pre, code):is([class~="hljs" i][class~="idris" i], [class~="hljs" i][class~="idr" i], [class~="highlight" i][class~="idris" i], [class~="highlight" i][class~="idr" i]) {
+        font-feature-settings: "calt" off, "IDRS" on;
+    }
+    pre[class~="highlight" i] [lang~="idris" i], pre[class~="highlight" i] [lang~="idr" i] {
+        font-feature-settings: "calt" off, "IDRS" on;
+    }
+    :is([class~="highlighted-elm" i], [class~="language-elm" i], [class~="mw-highlight-lang-elm" i], [class~="shj-lang-elm" i], [class~="highlight-source-elm" i]) :is(pre, code, textarea),
+    :is(pre, code):is([class~="highlighted-elm" i], [class~="language-elm" i], [class~="mw-highlight-lang-elm" i], [class~="shj-lang-elm" i], [class~="highlight-source-elm" i]) {
+        font-feature-settings: "calt" off, "ELMX" on;
+    }
+    :is([class~="elm-file-line" i]) :is(pre, code, textarea),
+    :is(pre, code):is([class~="elm-file-line" i]) {
+        font-feature-settings: "calt" off, "ELMX" on;
+    }
+    :is([data-langdata-language~="elm" i]) :is(pre, code, textarea),
+    :is(pre, code):is([data-langdata-language~="elm" i]) {
+        font-feature-settings: "calt" off, "ELMX" on;
+    }
+    :is([class~="hljs" i][class~="elm" i], [class~="highlight" i][class~="elm" i]) :is(pre, code, textarea),
+    :is(pre, code):is([class~="hljs" i][class~="elm" i], [class~="highlight" i][class~="elm" i]) {
+        font-feature-settings: "calt" off, "ELMX" on;
+    }
+    pre[class~="highlight" i] [lang~="elm" i] {
+        font-feature-settings: "calt" off, "ELMX" on;
+    }
+    :is([class~="highlighted-purescript" i], [class~="highlighted-purs" i], [class~="language-purescript" i], [class~="language-purs" i], [class~="mw-highlight-lang-purescript" i], [class~="mw-highlight-lang-purs" i], [class~="shj-lang-purescript" i], [class~="shj-lang-purs" i], [class~="highlight-source-purescript" i], [class~="highlight-source-purs" i]) :is(pre, code, textarea),
+    :is(pre, code):is([class~="highlighted-purescript" i], [class~="highlighted-purs" i], [class~="language-purescript" i], [class~="language-purs" i], [class~="mw-highlight-lang-purescript" i], [class~="mw-highlight-lang-purs" i], [class~="shj-lang-purescript" i], [class~="shj-lang-purs" i], [class~="highlight-source-purescript" i], [class~="highlight-source-purs" i]) {
+        font-feature-settings: "calt" off, "PURS" on;
+    }
+    :is([class~="purescript-file-line" i], [class~="purs-file-line" i]) :is(pre, code, textarea),
+    :is(pre, code):is([class~="purescript-file-line" i], [class~="purs-file-line" i]) {
+        font-feature-settings: "calt" off, "PURS" on;
+    }
+    :is([data-langdata-language~="purescript" i], [data-langdata-language~="purs" i]) :is(pre, code, textarea),
+    :is(pre, code):is([data-langdata-language~="purescript" i], [data-langdata-language~="purs" i]) {
+        font-feature-settings: "calt" off, "PURS" on;
+    }
+    :is([class~="hljs" i][class~="purescript" i], [class~="hljs" i][class~="purs" i], [class~="highlight" i][class~="purescript" i], [class~="highlight" i][class~="purs" i]) :is(pre, code, textarea),
+    :is(pre, code):is([class~="hljs" i][class~="purescript" i], [class~="hljs" i][class~="purs" i], [class~="highlight" i][class~="purescript" i], [class~="highlight" i][class~="purs" i]) {
+        font-feature-settings: "calt" off, "PURS" on;
+    }
+    pre[class~="highlight" i] [lang~="purescript" i], pre[class~="highlight" i] [lang~="purs" i] {
+        font-feature-settings: "calt" off, "PURS" on;
+    }
+    :is([class~="highlighted-swift" i], [class~="language-swift" i], [class~="mw-highlight-lang-swift" i], [class~="shj-lang-swift" i], [class~="highlight-source-swift" i]) :is(pre, code, textarea),
+    :is(pre, code):is([class~="highlighted-swift" i], [class~="language-swift" i], [class~="mw-highlight-lang-swift" i], [class~="shj-lang-swift" i], [class~="highlight-source-swift" i]) {
+        font-feature-settings: "calt" off, "SWFT" on;
+    }
+    :is([class~="swift-file-line" i]) :is(pre, code, textarea),
+    :is(pre, code):is([class~="swift-file-line" i]) {
+        font-feature-settings: "calt" off, "SWFT" on;
+    }
+    :is([data-langdata-language~="swift" i]) :is(pre, code, textarea),
+    :is(pre, code):is([data-langdata-language~="swift" i]) {
+        font-feature-settings: "calt" off, "SWFT" on;
+    }
+    :is([class~="hljs" i][class~="swift" i], [class~="highlight" i][class~="swift" i]) :is(pre, code, textarea),
+    :is(pre, code):is([class~="hljs" i][class~="swift" i], [class~="highlight" i][class~="swift" i]) {
+        font-feature-settings: "calt" off, "SWFT" on;
+    }
+    pre[class~="highlight" i] [lang~="swift" i] {
+        font-feature-settings: "calt" off, "SWFT" on;
+    }
+    :is([class~="highlighted-dafny" i], [class~="language-dafny" i], [class~="mw-highlight-lang-dafny" i], [class~="shj-lang-dafny" i], [class~="highlight-source-dafny" i]) :is(pre, code, textarea),
+    :is(pre, code):is([class~="highlighted-dafny" i], [class~="language-dafny" i], [class~="mw-highlight-lang-dafny" i], [class~="shj-lang-dafny" i], [class~="highlight-source-dafny" i]) {
+        font-feature-settings: "calt" off, "DFNY" on;
+    }
+    :is([class~="dafny-file-line" i]) :is(pre, code, textarea),
+    :is(pre, code):is([class~="dafny-file-line" i]) {
+        font-feature-settings: "calt" off, "DFNY" on;
+    }
+    :is([data-langdata-language~="dafny" i]) :is(pre, code, textarea),
+    :is(pre, code):is([data-langdata-language~="dafny" i]) {
+        font-feature-settings: "calt" off, "DFNY" on;
+    }
+    :is([class~="hljs" i][class~="dafny" i], [class~="highlight" i][class~="dafny" i]) :is(pre, code, textarea),
+    :is(pre, code):is([class~="hljs" i][class~="dafny" i], [class~="highlight" i][class~="dafny" i]) {
+        font-feature-settings: "calt" off, "DFNY" on;
+    }
+    pre[class~="highlight" i] [lang~="dafny" i] {
+        font-feature-settings: "calt" off, "DFNY" on;
+    }
+    :is([class~="highlighted-coq" i], [class~="language-coq" i], [class~="mw-highlight-lang-coq" i], [class~="shj-lang-coq" i], [class~="highlight-source-coq" i]) :is(pre, code, textarea),
+    :is(pre, code):is([class~="highlighted-coq" i], [class~="language-coq" i], [class~="mw-highlight-lang-coq" i], [class~="shj-lang-coq" i], [class~="highlight-source-coq" i]) {
+        font-feature-settings: "calt" off, "COQX" on;
+    }
+    :is([class~="coq-file-line" i]) :is(pre, code, textarea),
+    :is(pre, code):is([class~="coq-file-line" i]) {
+        font-feature-settings: "calt" off, "COQX" on;
+    }
+    :is([data-langdata-language~="coq" i]) :is(pre, code, textarea),
+    :is(pre, code):is([data-langdata-language~="coq" i]) {
+        font-feature-settings: "calt" off, "COQX" on;
+    }
+    :is([class~="hljs" i][class~="coq" i], [class~="highlight" i][class~="coq" i]) :is(pre, code, textarea),
+    :is(pre, code):is([class~="hljs" i][class~="coq" i], [class~="highlight" i][class~="coq" i]) {
+        font-feature-settings: "calt" off, "COQX" on;
+    }
+    pre[class~="highlight" i] [lang~="coq" i] {
+        font-feature-settings: "calt" off, "COQX" on;
+    }
+    :is([class~="highlighted-matlab" i], [class~="language-matlab" i], [class~="mw-highlight-lang-matlab" i], [class~="shj-lang-matlab" i], [class~="highlight-source-matlab" i]) :is(pre, code, textarea),
+    :is(pre, code):is([class~="highlighted-matlab" i], [class~="language-matlab" i], [class~="mw-highlight-lang-matlab" i], [class~="shj-lang-matlab" i], [class~="highlight-source-matlab" i]) {
+        font-feature-settings: "calt" off, "MTLB" on;
+    }
+    :is([class~="matlab-file-line" i]) :is(pre, code, textarea),
+    :is(pre, code):is([class~="matlab-file-line" i]) {
+        font-feature-settings: "calt" off, "MTLB" on;
+    }
+    :is([data-langdata-language~="matlab" i]) :is(pre, code, textarea),
+    :is(pre, code):is([data-langdata-language~="matlab" i]) {
+        font-feature-settings: "calt" off, "MTLB" on;
+    }
+    :is([class~="hljs" i][class~="matlab" i], [class~="highlight" i][class~="matlab" i]) :is(pre, code, textarea),
+    :is(pre, code):is([class~="hljs" i][class~="matlab" i], [class~="highlight" i][class~="matlab" i]) {
+        font-feature-settings: "calt" off, "MTLB" on;
+    }
+    pre[class~="highlight" i] [lang~="matlab" i] {
+        font-feature-settings: "calt" off, "MTLB" on;
+    }
+    :is([class~="highlighted-mathematica" i], [class~="highlighted-mma" i], [class~="highlighted-wl" i], [class~="language-mathematica" i], [class~="language-mma" i], [class~="language-wl" i], [class~="mw-highlight-lang-mathematica" i], [class~="mw-highlight-lang-mma" i], [class~="mw-highlight-lang-wl" i], [class~="shj-lang-mathematica" i], [class~="shj-lang-mma" i], [class~="shj-lang-wl" i], [class~="highlight-source-mathematica" i], [class~="highlight-source-mma" i], [class~="highlight-source-wl" i]) :is(pre, code, textarea),
+    :is(pre, code):is([class~="highlighted-mathematica" i], [class~="highlighted-mma" i], [class~="highlighted-wl" i], [class~="language-mathematica" i], [class~="language-mma" i], [class~="language-wl" i], [class~="mw-highlight-lang-mathematica" i], [class~="mw-highlight-lang-mma" i], [class~="mw-highlight-lang-wl" i], [class~="shj-lang-mathematica" i], [class~="shj-lang-mma" i], [class~="shj-lang-wl" i], [class~="highlight-source-mathematica" i], [class~="highlight-source-mma" i], [class~="highlight-source-wl" i]) {
+        font-feature-settings: "calt" off, "WFLM" on;
+    }
+    :is([class~="mathematica-file-line" i], [class~="mma-file-line" i], [class~="wl-file-line" i]) :is(pre, code, textarea),
+    :is(pre, code):is([class~="mathematica-file-line" i], [class~="mma-file-line" i], [class~="wl-file-line" i]) {
+        font-feature-settings: "calt" off, "WFLM" on;
+    }
+    :is([data-langdata-language~="mathematica" i], [data-langdata-language~="mma" i], [data-langdata-language~="wl" i]) :is(pre, code, textarea),
+    :is(pre, code):is([data-langdata-language~="mathematica" i], [data-langdata-language~="mma" i], [data-langdata-language~="wl" i]) {
+        font-feature-settings: "calt" off, "WFLM" on;
+    }
+    :is([class~="hljs" i][class~="mathematica" i], [class~="hljs" i][class~="mma" i], [class~="hljs" i][class~="wl" i], [class~="highlight" i][class~="mathematica" i], [class~="highlight" i][class~="mma" i], [class~="highlight" i][class~="wl" i]) :is(pre, code, textarea),
+    :is(pre, code):is([class~="hljs" i][class~="mathematica" i], [class~="hljs" i][class~="mma" i], [class~="hljs" i][class~="wl" i], [class~="highlight" i][class~="mathematica" i], [class~="highlight" i][class~="mma" i], [class~="highlight" i][class~="wl" i]) {
+        font-feature-settings: "calt" off, "WFLM" on;
+    }
+    pre[class~="highlight" i] [lang~="mathematica" i], pre[class~="highlight" i] [lang~="mma" i], pre[class~="highlight" i] [lang~="wl" i] {
+        font-feature-settings: "calt" off, "WFLM" on;
+    }
+    :is([class~="highlighted-verilog" i], [class~="highlighted-v" i], [class~="highlighted-sv" i], [class~="highlighted-svh" i], [class~="language-verilog" i], [class~="language-v" i], [class~="language-sv" i], [class~="language-svh" i], [class~="mw-highlight-lang-verilog" i], [class~="mw-highlight-lang-v" i], [class~="mw-highlight-lang-sv" i], [class~="mw-highlight-lang-svh" i], [class~="shj-lang-verilog" i], [class~="shj-lang-v" i], [class~="shj-lang-sv" i], [class~="shj-lang-svh" i], [class~="highlight-source-verilog" i], [class~="highlight-source-v" i], [class~="highlight-source-sv" i], [class~="highlight-source-svh" i]) :is(pre, code, textarea),
+    :is(pre, code):is([class~="highlighted-verilog" i], [class~="highlighted-v" i], [class~="highlighted-sv" i], [class~="highlighted-svh" i], [class~="language-verilog" i], [class~="language-v" i], [class~="language-sv" i], [class~="language-svh" i], [class~="mw-highlight-lang-verilog" i], [class~="mw-highlight-lang-v" i], [class~="mw-highlight-lang-sv" i], [class~="mw-highlight-lang-svh" i], [class~="shj-lang-verilog" i], [class~="shj-lang-v" i], [class~="shj-lang-sv" i], [class~="shj-lang-svh" i], [class~="highlight-source-verilog" i], [class~="highlight-source-v" i], [class~="highlight-source-sv" i], [class~="highlight-source-svh" i]) {
+        font-feature-settings: "calt" off, "VRLG" on;
+    }
+    :is([class~="verilog-file-line" i], [class~="v-file-line" i], [class~="sv-file-line" i], [class~="svh-file-line" i]) :is(pre, code, textarea),
+    :is(pre, code):is([class~="verilog-file-line" i], [class~="v-file-line" i], [class~="sv-file-line" i], [class~="svh-file-line" i]) {
+        font-feature-settings: "calt" off, "VRLG" on;
+    }
+    :is([data-langdata-language~="verilog" i], [data-langdata-language~="v" i], [data-langdata-language~="sv" i], [data-langdata-language~="svh" i]) :is(pre, code, textarea),
+    :is(pre, code):is([data-langdata-language~="verilog" i], [data-langdata-language~="v" i], [data-langdata-language~="sv" i], [data-langdata-language~="svh" i]) {
+        font-feature-settings: "calt" off, "VRLG" on;
+    }
+    :is([class~="hljs" i][class~="verilog" i], [class~="hljs" i][class~="v" i], [class~="hljs" i][class~="sv" i], [class~="hljs" i][class~="svh" i], [class~="highlight" i][class~="verilog" i], [class~="highlight" i][class~="v" i], [class~="highlight" i][class~="sv" i], [class~="highlight" i][class~="svh" i]) :is(pre, code, textarea),
+    :is(pre, code):is([class~="hljs" i][class~="verilog" i], [class~="hljs" i][class~="v" i], [class~="hljs" i][class~="sv" i], [class~="hljs" i][class~="svh" i], [class~="highlight" i][class~="verilog" i], [class~="highlight" i][class~="v" i], [class~="highlight" i][class~="sv" i], [class~="highlight" i][class~="svh" i]) {
+        font-feature-settings: "calt" off, "VRLG" on;
+    }
+    pre[class~="highlight" i] [lang~="verilog" i], pre[class~="highlight" i] [lang~="v" i], pre[class~="highlight" i] [lang~="sv" i], pre[class~="highlight" i] [lang~="svh" i] {
+        font-feature-settings: "calt" off, "VRLG" on;
+    }
+}
