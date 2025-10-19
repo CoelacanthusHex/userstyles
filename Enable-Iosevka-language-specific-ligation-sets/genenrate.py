@@ -8,7 +8,7 @@ from typing import Dict, List, TextIO, Iterable
 
 header: str = """/* ==UserStyle==
 @name           Enable Iosevka language-specific ligation sets
-@version        1.0.0
+@version        1.1.0
 @description    Enable Iosevka language-specific ligation sets for code elements.
 @namespace      Coelacanthus
 @homepageURL    https://github.com/CoelacanthusHex/userstyles
@@ -23,10 +23,28 @@ SPDX-License-Identifier: MPL-2.0
 """
 
 languages: Dict[str, List[str]] = {
-    # TODO: Consider let Java and Kotlin use C-like ligation?
-    # TODO: Consider let all languages mentioned in [1] use C-like ligation?
-    #       [1]: https://en.wikipedia.org/wiki/List_of_C-family_programming_languages
-    "CLIK": ["c", "cpp", "cc", "c++", "h++", "hpp", "hh", "hxx", "cxx"],
+    # FIXME: Don't include Golang because it uses :=.
+    "CLIK": [
+        "c",
+        "cpp",
+        "cc",
+        "c++",
+        "h++",
+        "hpp",
+        "hh",
+        "hxx",
+        "cxx",
+        "objc",
+        "objcpp",
+        "objc++",
+        "d",
+        "java",
+        "kotlin",
+        "csharp",
+        "cs",
+        "c#",
+        "zig",
+    ],
     "JSPT": [
         "javascript",
         "js",
@@ -41,24 +59,24 @@ languages: Dict[str, List[str]] = {
     ],
     "PHPX": ["php"],
     "JLIA": ["julia"],
-    # TODO: Consider let Perl and Ruby use Raku ligation?
+    # FIXME: Don't include Perl because it uses <>.
     "RAKU": ["raku"],
-    "MLXX": ["sml", "smlnj", "ml"],
-    # TODO: Is "fs" distinguishable between F# and F*?
+    "MLXX": ["sml", "smlnj", "ml", "ocaml"],
+    # FIXME: Is "fs" distinguishable between F# and F*?
     "FSHP": ["fsharp", "fs", "f#"],
     "FSTA": ["fstar"],
-    # TODO: Consider let Agda use Haskell or Idris ligation?
+    # FIXME: Don't include Agda because it uses Unicode.
     "HSKL": ["haskell", "hs"],
     "IDRS": ["idris", "idr"],
     "ELMX": ["elm"],
     "PURS": ["purescript", "purs"],
     "SWFT": ["swift"],
     "DFNY": ["dafny"],
-    "COQX": ["coq"],
+    "COQX": ["coq", "rcoq"],
     "MTLB": ["matlab"],
     "WFLM": ["mathematica", "mma", "wl"],
     "VRLG": ["verilog", "v", "sv", "svh"],
-    # TODO: Consider choose a ligation for Scala.
+    # FIXME: default seems best for Scala.
 }
 
 class_keywords_before: List[str] = [
