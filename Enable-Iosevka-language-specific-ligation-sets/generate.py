@@ -8,7 +8,7 @@ from typing import Dict, List, TextIO, Iterable, Optional
 
 header: str = """/* ==UserStyle==
 @name           Enable Iosevka language-specific ligation sets
-@version        1.2.0
+@version        1.3.0
 @description    Enable Iosevka language-specific ligation sets for code elements.
 @namespace      Coelacanthus
 @homepageURL    https://github.com/CoelacanthusHex/userstyles
@@ -54,6 +54,7 @@ languages: Dict[str, List[str]] = {
         "c#",
         # Zig
         "zig",
+        "zir",
     ],
     "JSPT": [
         # JavaScript
@@ -71,9 +72,14 @@ languages: Dict[str, List[str]] = {
     ],
     "PHPX": [
         "php",
+        "php3",
+        "php4",
+        "php5",
+        "phpt",
     ],
     "JLIA": [
         "julia",
+        "jl",
     ],
     # FIXME: Don't include Perl because it uses <>.
     "RAKU": [
@@ -122,13 +128,6 @@ languages: Dict[str, List[str]] = {
     "MTLB": [
         "matlab",
     ],
-    "WFLM": [
-        # Mathematica
-        "mathematica",
-        "mma",
-        # Wolfram Language
-        "wl",
-    ],
     "VRLG": [
         # Verilog
         "verilog",
@@ -137,6 +136,18 @@ languages: Dict[str, List[str]] = {
         "sv",
         "svh",
     ],
+    "WFLM": [
+        # Mathematica
+        "mathematica",
+        "mma",
+        # Wolfram Language
+        "wolfram",
+        "wl",
+    ],
+    "ERLA": [
+        "erlang",
+        "erl",
+    ],
     # FIXME: default seems best for Scala.
 }
 
@@ -144,7 +155,7 @@ class_keywords_before: List[str] = [
     # Meow Meow (@CircuitCoder) homebrew highlighter
     # https://github.com/CircuitCoder/layered/blob/b76a5be5377703e3e781542eee743fca42433c57/gen/src/post/md.rs#L106
     "highlighted",
-    # Very common. Like Shiki, Prism.js, Highlight.js.
+    # Very common. Like Shiki, Prism.js, Highlight.js, Rouge.
     # https://github.com/PrismJS/prism/blob/9579fc1c2a501506f6a5ee1d007585a08569a067/src/shared/dom-util.js#L30
     "language",
     # MediaWiki
@@ -169,6 +180,8 @@ class_keywords_after: List[str] = [
 ]
 attribute_keywords: List[str] = [
     "data-lang",
+    # Astro
+    # https://github.com/withastro/astro/blob/d5bdbc026e7853f624cb099dfe2899ca0f82ea52/packages/markdown/remark/src/rehype-prism.ts#L14
     "data-language",
     # MDN
     "language",
@@ -185,6 +198,8 @@ combine_classes: List[str] = [
     #        https://greasyfork.org/en/scripts/424030-stylus-shadow-dom-support
     #        But all available userscripts failed on Firefox.
     "brush:",
+    # Pandoc
+    "sourceCode",
 ]
 
 
@@ -213,7 +228,7 @@ def write_rule_with_whole_selectors(
         file.write("    }\n")
 
 
-def main():
+def main() -> None:
     with open("Enable-Iosevka-language-specific-ligation-sets.user.css", "w") as file:
         file.write(header)
         for tag, lang in languages.items():
