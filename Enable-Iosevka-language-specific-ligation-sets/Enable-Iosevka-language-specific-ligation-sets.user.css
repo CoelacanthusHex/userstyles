@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name           Enable Iosevka language-specific ligation sets
-@version        1.3.0
+@version        1.4.0
 @description    Enable Iosevka language-specific ligation sets for code elements.
 @namespace      Coelacanthus
 @homepageURL    https://github.com/CoelacanthusHex/userstyles
@@ -192,6 +192,72 @@ SPDX-License-Identifier: MPL-2.0
     pre[class~="zir" i] {
         font-feature-settings: "calt" off, "CLIK" on;
     }
+    pre[class~="monaco-editor" i][data-uri*="c" i] {
+        font-feature-settings: "calt" off, "CLIK" on;
+    }
+    pre[class~="monaco-editor" i][data-uri*="cpp" i] {
+        font-feature-settings: "calt" off, "CLIK" on;
+    }
+    pre[class~="monaco-editor" i][data-uri*="cc" i] {
+        font-feature-settings: "calt" off, "CLIK" on;
+    }
+    pre[class~="monaco-editor" i][data-uri*="c++" i] {
+        font-feature-settings: "calt" off, "CLIK" on;
+    }
+    pre[class~="monaco-editor" i][data-uri*="h++" i] {
+        font-feature-settings: "calt" off, "CLIK" on;
+    }
+    pre[class~="monaco-editor" i][data-uri*="hpp" i] {
+        font-feature-settings: "calt" off, "CLIK" on;
+    }
+    pre[class~="monaco-editor" i][data-uri*="hh" i] {
+        font-feature-settings: "calt" off, "CLIK" on;
+    }
+    pre[class~="monaco-editor" i][data-uri*="hxx" i] {
+        font-feature-settings: "calt" off, "CLIK" on;
+    }
+    pre[class~="monaco-editor" i][data-uri*="cxx" i] {
+        font-feature-settings: "calt" off, "CLIK" on;
+    }
+    pre[class~="monaco-editor" i][data-uri*="objc" i] {
+        font-feature-settings: "calt" off, "CLIK" on;
+    }
+    pre[class~="monaco-editor" i][data-uri*="objcpp" i] {
+        font-feature-settings: "calt" off, "CLIK" on;
+    }
+    pre[class~="monaco-editor" i][data-uri*="objc++" i] {
+        font-feature-settings: "calt" off, "CLIK" on;
+    }
+    pre[class~="monaco-editor" i][data-uri*="d" i] {
+        font-feature-settings: "calt" off, "CLIK" on;
+    }
+    pre[class~="monaco-editor" i][data-uri*="java" i] {
+        font-feature-settings: "calt" off, "CLIK" on;
+    }
+    pre[class~="monaco-editor" i][data-uri*="kotlin" i] {
+        font-feature-settings: "calt" off, "CLIK" on;
+    }
+    pre[class~="monaco-editor" i][data-uri*="kt" i] {
+        font-feature-settings: "calt" off, "CLIK" on;
+    }
+    pre[class~="monaco-editor" i][data-uri*="kts" i] {
+        font-feature-settings: "calt" off, "CLIK" on;
+    }
+    pre[class~="monaco-editor" i][data-uri*="csharp" i] {
+        font-feature-settings: "calt" off, "CLIK" on;
+    }
+    pre[class~="monaco-editor" i][data-uri*="cs" i] {
+        font-feature-settings: "calt" off, "CLIK" on;
+    }
+    pre[class~="monaco-editor" i][data-uri*="c#" i] {
+        font-feature-settings: "calt" off, "CLIK" on;
+    }
+    pre[class~="monaco-editor" i][data-uri*="zig" i] {
+        font-feature-settings: "calt" off, "CLIK" on;
+    }
+    pre[class~="monaco-editor" i][data-uri*="zir" i] {
+        font-feature-settings: "calt" off, "CLIK" on;
+    }
     :is([class~="highlighted-javascript" i], [class~="highlighted-js" i], [class~="highlighted-jsx" i], [class~="highlighted-mjs" i], [class~="highlighted-cjs" i], [class~="highlighted-typescript" i], [class~="highlighted-ts" i], [class~="highlighted-tsx" i], [class~="highlighted-mts" i], [class~="highlighted-cts" i], [class~="language-javascript" i], [class~="language-js" i], [class~="language-jsx" i], [class~="language-mjs" i], [class~="language-cjs" i], [class~="language-typescript" i], [class~="language-ts" i], [class~="language-tsx" i], [class~="language-mts" i], [class~="language-cts" i], [class~="mw-highlight-lang-javascript" i], [class~="mw-highlight-lang-js" i], [class~="mw-highlight-lang-jsx" i], [class~="mw-highlight-lang-mjs" i], [class~="mw-highlight-lang-cjs" i], [class~="mw-highlight-lang-typescript" i], [class~="mw-highlight-lang-ts" i], [class~="mw-highlight-lang-tsx" i], [class~="mw-highlight-lang-mts" i], [class~="mw-highlight-lang-cts" i], [class~="shj-lang-javascript" i], [class~="shj-lang-js" i], [class~="shj-lang-jsx" i], [class~="shj-lang-mjs" i], [class~="shj-lang-cjs" i], [class~="shj-lang-typescript" i], [class~="shj-lang-ts" i], [class~="shj-lang-tsx" i], [class~="shj-lang-mts" i], [class~="shj-lang-cts" i], [class~="highlight-source-javascript" i], [class~="highlight-source-js" i], [class~="highlight-source-jsx" i], [class~="highlight-source-mjs" i], [class~="highlight-source-cjs" i], [class~="highlight-source-typescript" i], [class~="highlight-source-ts" i], [class~="highlight-source-tsx" i], [class~="highlight-source-mts" i], [class~="highlight-source-cts" i], [class~="lang-javascript" i], [class~="lang-js" i], [class~="lang-jsx" i], [class~="lang-mjs" i], [class~="lang-cjs" i], [class~="lang-typescript" i], [class~="lang-ts" i], [class~="lang-tsx" i], [class~="lang-mts" i], [class~="lang-cts" i], [class~="highlight-javascript" i], [class~="highlight-js" i], [class~="highlight-jsx" i], [class~="highlight-mjs" i], [class~="highlight-cjs" i], [class~="highlight-typescript" i], [class~="highlight-ts" i], [class~="highlight-tsx" i], [class~="highlight-mts" i], [class~="highlight-cts" i], [class~="hljs-javascript" i], [class~="hljs-js" i], [class~="hljs-jsx" i], [class~="hljs-mjs" i], [class~="hljs-cjs" i], [class~="hljs-typescript" i], [class~="hljs-ts" i], [class~="hljs-tsx" i], [class~="hljs-mts" i], [class~="hljs-cts" i], [class~="hljs-language-javascript" i], [class~="hljs-language-js" i], [class~="hljs-language-jsx" i], [class~="hljs-language-mjs" i], [class~="hljs-language-cjs" i], [class~="hljs-language-typescript" i], [class~="hljs-language-ts" i], [class~="hljs-language-tsx" i], [class~="hljs-language-mts" i], [class~="hljs-language-cts" i]) :is(pre, code, textarea) {
         font-feature-settings: "calt" off, "JSPT" on;
     }
@@ -300,6 +366,36 @@ SPDX-License-Identifier: MPL-2.0
     pre[class~="cts" i] {
         font-feature-settings: "calt" off, "JSPT" on;
     }
+    pre[class~="monaco-editor" i][data-uri*="javascript" i] {
+        font-feature-settings: "calt" off, "JSPT" on;
+    }
+    pre[class~="monaco-editor" i][data-uri*="js" i] {
+        font-feature-settings: "calt" off, "JSPT" on;
+    }
+    pre[class~="monaco-editor" i][data-uri*="jsx" i] {
+        font-feature-settings: "calt" off, "JSPT" on;
+    }
+    pre[class~="monaco-editor" i][data-uri*="mjs" i] {
+        font-feature-settings: "calt" off, "JSPT" on;
+    }
+    pre[class~="monaco-editor" i][data-uri*="cjs" i] {
+        font-feature-settings: "calt" off, "JSPT" on;
+    }
+    pre[class~="monaco-editor" i][data-uri*="typescript" i] {
+        font-feature-settings: "calt" off, "JSPT" on;
+    }
+    pre[class~="monaco-editor" i][data-uri*="ts" i] {
+        font-feature-settings: "calt" off, "JSPT" on;
+    }
+    pre[class~="monaco-editor" i][data-uri*="tsx" i] {
+        font-feature-settings: "calt" off, "JSPT" on;
+    }
+    pre[class~="monaco-editor" i][data-uri*="mts" i] {
+        font-feature-settings: "calt" off, "JSPT" on;
+    }
+    pre[class~="monaco-editor" i][data-uri*="cts" i] {
+        font-feature-settings: "calt" off, "JSPT" on;
+    }
     :is([class~="highlighted-php" i], [class~="highlighted-php3" i], [class~="highlighted-php4" i], [class~="highlighted-php5" i], [class~="highlighted-phpt" i], [class~="language-php" i], [class~="language-php3" i], [class~="language-php4" i], [class~="language-php5" i], [class~="language-phpt" i], [class~="mw-highlight-lang-php" i], [class~="mw-highlight-lang-php3" i], [class~="mw-highlight-lang-php4" i], [class~="mw-highlight-lang-php5" i], [class~="mw-highlight-lang-phpt" i], [class~="shj-lang-php" i], [class~="shj-lang-php3" i], [class~="shj-lang-php4" i], [class~="shj-lang-php5" i], [class~="shj-lang-phpt" i], [class~="highlight-source-php" i], [class~="highlight-source-php3" i], [class~="highlight-source-php4" i], [class~="highlight-source-php5" i], [class~="highlight-source-phpt" i], [class~="lang-php" i], [class~="lang-php3" i], [class~="lang-php4" i], [class~="lang-php5" i], [class~="lang-phpt" i], [class~="highlight-php" i], [class~="highlight-php3" i], [class~="highlight-php4" i], [class~="highlight-php5" i], [class~="highlight-phpt" i], [class~="hljs-php" i], [class~="hljs-php3" i], [class~="hljs-php4" i], [class~="hljs-php5" i], [class~="hljs-phpt" i], [class~="hljs-language-php" i], [class~="hljs-language-php3" i], [class~="hljs-language-php4" i], [class~="hljs-language-php5" i], [class~="hljs-language-phpt" i]) :is(pre, code, textarea) {
         font-feature-settings: "calt" off, "PHPX" on;
     }
@@ -378,6 +474,21 @@ SPDX-License-Identifier: MPL-2.0
     pre[class~="phpt" i] {
         font-feature-settings: "calt" off, "PHPX" on;
     }
+    pre[class~="monaco-editor" i][data-uri*="php" i] {
+        font-feature-settings: "calt" off, "PHPX" on;
+    }
+    pre[class~="monaco-editor" i][data-uri*="php3" i] {
+        font-feature-settings: "calt" off, "PHPX" on;
+    }
+    pre[class~="monaco-editor" i][data-uri*="php4" i] {
+        font-feature-settings: "calt" off, "PHPX" on;
+    }
+    pre[class~="monaco-editor" i][data-uri*="php5" i] {
+        font-feature-settings: "calt" off, "PHPX" on;
+    }
+    pre[class~="monaco-editor" i][data-uri*="phpt" i] {
+        font-feature-settings: "calt" off, "PHPX" on;
+    }
     :is([class~="highlighted-julia" i], [class~="highlighted-jl" i], [class~="language-julia" i], [class~="language-jl" i], [class~="mw-highlight-lang-julia" i], [class~="mw-highlight-lang-jl" i], [class~="shj-lang-julia" i], [class~="shj-lang-jl" i], [class~="highlight-source-julia" i], [class~="highlight-source-jl" i], [class~="lang-julia" i], [class~="lang-jl" i], [class~="highlight-julia" i], [class~="highlight-jl" i], [class~="hljs-julia" i], [class~="hljs-jl" i], [class~="hljs-language-julia" i], [class~="hljs-language-jl" i]) :is(pre, code, textarea) {
         font-feature-settings: "calt" off, "JLIA" on;
     }
@@ -438,6 +549,12 @@ SPDX-License-Identifier: MPL-2.0
     pre[class~="jl" i] {
         font-feature-settings: "calt" off, "JLIA" on;
     }
+    pre[class~="monaco-editor" i][data-uri*="julia" i] {
+        font-feature-settings: "calt" off, "JLIA" on;
+    }
+    pre[class~="monaco-editor" i][data-uri*="jl" i] {
+        font-feature-settings: "calt" off, "JLIA" on;
+    }
     :is([class~="highlighted-raku" i], [class~="language-raku" i], [class~="mw-highlight-lang-raku" i], [class~="shj-lang-raku" i], [class~="highlight-source-raku" i], [class~="lang-raku" i], [class~="highlight-raku" i], [class~="hljs-raku" i], [class~="hljs-language-raku" i]) :is(pre, code, textarea) {
         font-feature-settings: "calt" off, "RAKU" on;
     }
@@ -490,6 +607,9 @@ SPDX-License-Identifier: MPL-2.0
         font-feature-settings: "calt" off, "RAKU" on;
     }
     pre[class~="raku" i] {
+        font-feature-settings: "calt" off, "RAKU" on;
+    }
+    pre[class~="monaco-editor" i][data-uri*="raku" i] {
         font-feature-settings: "calt" off, "RAKU" on;
     }
     :is([class~="highlighted-sml" i], [class~="highlighted-smlnj" i], [class~="highlighted-ml" i], [class~="highlighted-ocaml" i], [class~="language-sml" i], [class~="language-smlnj" i], [class~="language-ml" i], [class~="language-ocaml" i], [class~="mw-highlight-lang-sml" i], [class~="mw-highlight-lang-smlnj" i], [class~="mw-highlight-lang-ml" i], [class~="mw-highlight-lang-ocaml" i], [class~="shj-lang-sml" i], [class~="shj-lang-smlnj" i], [class~="shj-lang-ml" i], [class~="shj-lang-ocaml" i], [class~="highlight-source-sml" i], [class~="highlight-source-smlnj" i], [class~="highlight-source-ml" i], [class~="highlight-source-ocaml" i], [class~="lang-sml" i], [class~="lang-smlnj" i], [class~="lang-ml" i], [class~="lang-ocaml" i], [class~="highlight-sml" i], [class~="highlight-smlnj" i], [class~="highlight-ml" i], [class~="highlight-ocaml" i], [class~="hljs-sml" i], [class~="hljs-smlnj" i], [class~="hljs-ml" i], [class~="hljs-ocaml" i], [class~="hljs-language-sml" i], [class~="hljs-language-smlnj" i], [class~="hljs-language-ml" i], [class~="hljs-language-ocaml" i]) :is(pre, code, textarea) {
@@ -564,6 +684,18 @@ SPDX-License-Identifier: MPL-2.0
     pre[class~="ocaml" i] {
         font-feature-settings: "calt" off, "MLXX" on;
     }
+    pre[class~="monaco-editor" i][data-uri*="sml" i] {
+        font-feature-settings: "calt" off, "MLXX" on;
+    }
+    pre[class~="monaco-editor" i][data-uri*="smlnj" i] {
+        font-feature-settings: "calt" off, "MLXX" on;
+    }
+    pre[class~="monaco-editor" i][data-uri*="ml" i] {
+        font-feature-settings: "calt" off, "MLXX" on;
+    }
+    pre[class~="monaco-editor" i][data-uri*="ocaml" i] {
+        font-feature-settings: "calt" off, "MLXX" on;
+    }
     :is([class~="highlighted-fsharp" i], [class~="highlighted-fs" i], [class~="highlighted-f#" i], [class~="language-fsharp" i], [class~="language-fs" i], [class~="language-f#" i], [class~="mw-highlight-lang-fsharp" i], [class~="mw-highlight-lang-fs" i], [class~="mw-highlight-lang-f#" i], [class~="shj-lang-fsharp" i], [class~="shj-lang-fs" i], [class~="shj-lang-f#" i], [class~="highlight-source-fsharp" i], [class~="highlight-source-fs" i], [class~="highlight-source-f#" i], [class~="lang-fsharp" i], [class~="lang-fs" i], [class~="lang-f#" i], [class~="highlight-fsharp" i], [class~="highlight-fs" i], [class~="highlight-f#" i], [class~="hljs-fsharp" i], [class~="hljs-fs" i], [class~="hljs-f#" i], [class~="hljs-language-fsharp" i], [class~="hljs-language-fs" i], [class~="hljs-language-f#" i]) :is(pre, code, textarea) {
         font-feature-settings: "calt" off, "FSHP" on;
     }
@@ -630,6 +762,15 @@ SPDX-License-Identifier: MPL-2.0
     pre[class~="f#" i] {
         font-feature-settings: "calt" off, "FSHP" on;
     }
+    pre[class~="monaco-editor" i][data-uri*="fsharp" i] {
+        font-feature-settings: "calt" off, "FSHP" on;
+    }
+    pre[class~="monaco-editor" i][data-uri*="fs" i] {
+        font-feature-settings: "calt" off, "FSHP" on;
+    }
+    pre[class~="monaco-editor" i][data-uri*="f#" i] {
+        font-feature-settings: "calt" off, "FSHP" on;
+    }
     :is([class~="highlighted-fstar" i], [class~="language-fstar" i], [class~="mw-highlight-lang-fstar" i], [class~="shj-lang-fstar" i], [class~="highlight-source-fstar" i], [class~="lang-fstar" i], [class~="highlight-fstar" i], [class~="hljs-fstar" i], [class~="hljs-language-fstar" i]) :is(pre, code, textarea) {
         font-feature-settings: "calt" off, "FSTA" on;
     }
@@ -682,6 +823,9 @@ SPDX-License-Identifier: MPL-2.0
         font-feature-settings: "calt" off, "FSTA" on;
     }
     pre[class~="fstar" i] {
+        font-feature-settings: "calt" off, "FSTA" on;
+    }
+    pre[class~="monaco-editor" i][data-uri*="fstar" i] {
         font-feature-settings: "calt" off, "FSTA" on;
     }
     :is([class~="highlighted-haskell" i], [class~="highlighted-hs" i], [class~="highlighted-lhs" i], [class~="language-haskell" i], [class~="language-hs" i], [class~="language-lhs" i], [class~="mw-highlight-lang-haskell" i], [class~="mw-highlight-lang-hs" i], [class~="mw-highlight-lang-lhs" i], [class~="shj-lang-haskell" i], [class~="shj-lang-hs" i], [class~="shj-lang-lhs" i], [class~="highlight-source-haskell" i], [class~="highlight-source-hs" i], [class~="highlight-source-lhs" i], [class~="lang-haskell" i], [class~="lang-hs" i], [class~="lang-lhs" i], [class~="highlight-haskell" i], [class~="highlight-hs" i], [class~="highlight-lhs" i], [class~="hljs-haskell" i], [class~="hljs-hs" i], [class~="hljs-lhs" i], [class~="hljs-language-haskell" i], [class~="hljs-language-hs" i], [class~="hljs-language-lhs" i]) :is(pre, code, textarea) {
@@ -750,6 +894,15 @@ SPDX-License-Identifier: MPL-2.0
     pre[class~="lhs" i] {
         font-feature-settings: "calt" off, "HSKL" on;
     }
+    pre[class~="monaco-editor" i][data-uri*="haskell" i] {
+        font-feature-settings: "calt" off, "HSKL" on;
+    }
+    pre[class~="monaco-editor" i][data-uri*="hs" i] {
+        font-feature-settings: "calt" off, "HSKL" on;
+    }
+    pre[class~="monaco-editor" i][data-uri*="lhs" i] {
+        font-feature-settings: "calt" off, "HSKL" on;
+    }
     :is([class~="highlighted-idris" i], [class~="highlighted-idr" i], [class~="language-idris" i], [class~="language-idr" i], [class~="mw-highlight-lang-idris" i], [class~="mw-highlight-lang-idr" i], [class~="shj-lang-idris" i], [class~="shj-lang-idr" i], [class~="highlight-source-idris" i], [class~="highlight-source-idr" i], [class~="lang-idris" i], [class~="lang-idr" i], [class~="highlight-idris" i], [class~="highlight-idr" i], [class~="hljs-idris" i], [class~="hljs-idr" i], [class~="hljs-language-idris" i], [class~="hljs-language-idr" i]) :is(pre, code, textarea) {
         font-feature-settings: "calt" off, "IDRS" on;
     }
@@ -810,6 +963,12 @@ SPDX-License-Identifier: MPL-2.0
     pre[class~="idr" i] {
         font-feature-settings: "calt" off, "IDRS" on;
     }
+    pre[class~="monaco-editor" i][data-uri*="idris" i] {
+        font-feature-settings: "calt" off, "IDRS" on;
+    }
+    pre[class~="monaco-editor" i][data-uri*="idr" i] {
+        font-feature-settings: "calt" off, "IDRS" on;
+    }
     :is([class~="highlighted-elm" i], [class~="language-elm" i], [class~="mw-highlight-lang-elm" i], [class~="shj-lang-elm" i], [class~="highlight-source-elm" i], [class~="lang-elm" i], [class~="highlight-elm" i], [class~="hljs-elm" i], [class~="hljs-language-elm" i]) :is(pre, code, textarea) {
         font-feature-settings: "calt" off, "ELMX" on;
     }
@@ -862,6 +1021,9 @@ SPDX-License-Identifier: MPL-2.0
         font-feature-settings: "calt" off, "ELMX" on;
     }
     pre[class~="elm" i] {
+        font-feature-settings: "calt" off, "ELMX" on;
+    }
+    pre[class~="monaco-editor" i][data-uri*="elm" i] {
         font-feature-settings: "calt" off, "ELMX" on;
     }
     :is([class~="highlighted-purescript" i], [class~="highlighted-purs" i], [class~="language-purescript" i], [class~="language-purs" i], [class~="mw-highlight-lang-purescript" i], [class~="mw-highlight-lang-purs" i], [class~="shj-lang-purescript" i], [class~="shj-lang-purs" i], [class~="highlight-source-purescript" i], [class~="highlight-source-purs" i], [class~="lang-purescript" i], [class~="lang-purs" i], [class~="highlight-purescript" i], [class~="highlight-purs" i], [class~="hljs-purescript" i], [class~="hljs-purs" i], [class~="hljs-language-purescript" i], [class~="hljs-language-purs" i]) :is(pre, code, textarea) {
@@ -924,6 +1086,12 @@ SPDX-License-Identifier: MPL-2.0
     pre[class~="purs" i] {
         font-feature-settings: "calt" off, "PURS" on;
     }
+    pre[class~="monaco-editor" i][data-uri*="purescript" i] {
+        font-feature-settings: "calt" off, "PURS" on;
+    }
+    pre[class~="monaco-editor" i][data-uri*="purs" i] {
+        font-feature-settings: "calt" off, "PURS" on;
+    }
     :is([class~="highlighted-swift" i], [class~="language-swift" i], [class~="mw-highlight-lang-swift" i], [class~="shj-lang-swift" i], [class~="highlight-source-swift" i], [class~="lang-swift" i], [class~="highlight-swift" i], [class~="hljs-swift" i], [class~="hljs-language-swift" i]) :is(pre, code, textarea) {
         font-feature-settings: "calt" off, "SWFT" on;
     }
@@ -978,6 +1146,9 @@ SPDX-License-Identifier: MPL-2.0
     pre[class~="swift" i] {
         font-feature-settings: "calt" off, "SWFT" on;
     }
+    pre[class~="monaco-editor" i][data-uri*="swift" i] {
+        font-feature-settings: "calt" off, "SWFT" on;
+    }
     :is([class~="highlighted-dafny" i], [class~="language-dafny" i], [class~="mw-highlight-lang-dafny" i], [class~="shj-lang-dafny" i], [class~="highlight-source-dafny" i], [class~="lang-dafny" i], [class~="highlight-dafny" i], [class~="hljs-dafny" i], [class~="hljs-language-dafny" i]) :is(pre, code, textarea) {
         font-feature-settings: "calt" off, "DFNY" on;
     }
@@ -1030,6 +1201,9 @@ SPDX-License-Identifier: MPL-2.0
         font-feature-settings: "calt" off, "DFNY" on;
     }
     pre[class~="dafny" i] {
+        font-feature-settings: "calt" off, "DFNY" on;
+    }
+    pre[class~="monaco-editor" i][data-uri*="dafny" i] {
         font-feature-settings: "calt" off, "DFNY" on;
     }
     :is([class~="highlighted-coq" i], [class~="highlighted-rocq" i], [class~="language-coq" i], [class~="language-rocq" i], [class~="mw-highlight-lang-coq" i], [class~="mw-highlight-lang-rocq" i], [class~="shj-lang-coq" i], [class~="shj-lang-rocq" i], [class~="highlight-source-coq" i], [class~="highlight-source-rocq" i], [class~="lang-coq" i], [class~="lang-rocq" i], [class~="highlight-coq" i], [class~="highlight-rocq" i], [class~="hljs-coq" i], [class~="hljs-rocq" i], [class~="hljs-language-coq" i], [class~="hljs-language-rocq" i]) :is(pre, code, textarea) {
@@ -1092,6 +1266,12 @@ SPDX-License-Identifier: MPL-2.0
     pre[class~="rocq" i] {
         font-feature-settings: "calt" off, "COQX" on;
     }
+    pre[class~="monaco-editor" i][data-uri*="coq" i] {
+        font-feature-settings: "calt" off, "COQX" on;
+    }
+    pre[class~="monaco-editor" i][data-uri*="rocq" i] {
+        font-feature-settings: "calt" off, "COQX" on;
+    }
     :is([class~="highlighted-matlab" i], [class~="language-matlab" i], [class~="mw-highlight-lang-matlab" i], [class~="shj-lang-matlab" i], [class~="highlight-source-matlab" i], [class~="lang-matlab" i], [class~="highlight-matlab" i], [class~="hljs-matlab" i], [class~="hljs-language-matlab" i]) :is(pre, code, textarea) {
         font-feature-settings: "calt" off, "MTLB" on;
     }
@@ -1144,6 +1324,9 @@ SPDX-License-Identifier: MPL-2.0
         font-feature-settings: "calt" off, "MTLB" on;
     }
     pre[class~="matlab" i] {
+        font-feature-settings: "calt" off, "MTLB" on;
+    }
+    pre[class~="monaco-editor" i][data-uri*="matlab" i] {
         font-feature-settings: "calt" off, "MTLB" on;
     }
     :is([class~="highlighted-verilog" i], [class~="highlighted-v" i], [class~="highlighted-sv" i], [class~="highlighted-svh" i], [class~="language-verilog" i], [class~="language-v" i], [class~="language-sv" i], [class~="language-svh" i], [class~="mw-highlight-lang-verilog" i], [class~="mw-highlight-lang-v" i], [class~="mw-highlight-lang-sv" i], [class~="mw-highlight-lang-svh" i], [class~="shj-lang-verilog" i], [class~="shj-lang-v" i], [class~="shj-lang-sv" i], [class~="shj-lang-svh" i], [class~="highlight-source-verilog" i], [class~="highlight-source-v" i], [class~="highlight-source-sv" i], [class~="highlight-source-svh" i], [class~="lang-verilog" i], [class~="lang-v" i], [class~="lang-sv" i], [class~="lang-svh" i], [class~="highlight-verilog" i], [class~="highlight-v" i], [class~="highlight-sv" i], [class~="highlight-svh" i], [class~="hljs-verilog" i], [class~="hljs-v" i], [class~="hljs-sv" i], [class~="hljs-svh" i], [class~="hljs-language-verilog" i], [class~="hljs-language-v" i], [class~="hljs-language-sv" i], [class~="hljs-language-svh" i]) :is(pre, code, textarea) {
@@ -1218,6 +1401,18 @@ SPDX-License-Identifier: MPL-2.0
     pre[class~="svh" i] {
         font-feature-settings: "calt" off, "VRLG" on;
     }
+    pre[class~="monaco-editor" i][data-uri*="verilog" i] {
+        font-feature-settings: "calt" off, "VRLG" on;
+    }
+    pre[class~="monaco-editor" i][data-uri*="v" i] {
+        font-feature-settings: "calt" off, "VRLG" on;
+    }
+    pre[class~="monaco-editor" i][data-uri*="sv" i] {
+        font-feature-settings: "calt" off, "VRLG" on;
+    }
+    pre[class~="monaco-editor" i][data-uri*="svh" i] {
+        font-feature-settings: "calt" off, "VRLG" on;
+    }
     :is([class~="highlighted-mathematica" i], [class~="highlighted-mma" i], [class~="highlighted-wolfram" i], [class~="highlighted-wl" i], [class~="language-mathematica" i], [class~="language-mma" i], [class~="language-wolfram" i], [class~="language-wl" i], [class~="mw-highlight-lang-mathematica" i], [class~="mw-highlight-lang-mma" i], [class~="mw-highlight-lang-wolfram" i], [class~="mw-highlight-lang-wl" i], [class~="shj-lang-mathematica" i], [class~="shj-lang-mma" i], [class~="shj-lang-wolfram" i], [class~="shj-lang-wl" i], [class~="highlight-source-mathematica" i], [class~="highlight-source-mma" i], [class~="highlight-source-wolfram" i], [class~="highlight-source-wl" i], [class~="lang-mathematica" i], [class~="lang-mma" i], [class~="lang-wolfram" i], [class~="lang-wl" i], [class~="highlight-mathematica" i], [class~="highlight-mma" i], [class~="highlight-wolfram" i], [class~="highlight-wl" i], [class~="hljs-mathematica" i], [class~="hljs-mma" i], [class~="hljs-wolfram" i], [class~="hljs-wl" i], [class~="hljs-language-mathematica" i], [class~="hljs-language-mma" i], [class~="hljs-language-wolfram" i], [class~="hljs-language-wl" i]) :is(pre, code, textarea) {
         font-feature-settings: "calt" off, "WFLM" on;
     }
@@ -1290,6 +1485,18 @@ SPDX-License-Identifier: MPL-2.0
     pre[class~="wl" i] {
         font-feature-settings: "calt" off, "WFLM" on;
     }
+    pre[class~="monaco-editor" i][data-uri*="mathematica" i] {
+        font-feature-settings: "calt" off, "WFLM" on;
+    }
+    pre[class~="monaco-editor" i][data-uri*="mma" i] {
+        font-feature-settings: "calt" off, "WFLM" on;
+    }
+    pre[class~="monaco-editor" i][data-uri*="wolfram" i] {
+        font-feature-settings: "calt" off, "WFLM" on;
+    }
+    pre[class~="monaco-editor" i][data-uri*="wl" i] {
+        font-feature-settings: "calt" off, "WFLM" on;
+    }
     :is([class~="highlighted-erlang" i], [class~="highlighted-erl" i], [class~="language-erlang" i], [class~="language-erl" i], [class~="mw-highlight-lang-erlang" i], [class~="mw-highlight-lang-erl" i], [class~="shj-lang-erlang" i], [class~="shj-lang-erl" i], [class~="highlight-source-erlang" i], [class~="highlight-source-erl" i], [class~="lang-erlang" i], [class~="lang-erl" i], [class~="highlight-erlang" i], [class~="highlight-erl" i], [class~="hljs-erlang" i], [class~="hljs-erl" i], [class~="hljs-language-erlang" i], [class~="hljs-language-erl" i]) :is(pre, code, textarea) {
         font-feature-settings: "calt" off, "ERLA" on;
     }
@@ -1348,6 +1555,12 @@ SPDX-License-Identifier: MPL-2.0
         font-feature-settings: "calt" off, "ERLA" on;
     }
     pre[class~="erl" i] {
+        font-feature-settings: "calt" off, "ERLA" on;
+    }
+    pre[class~="monaco-editor" i][data-uri*="erlang" i] {
+        font-feature-settings: "calt" off, "ERLA" on;
+    }
+    pre[class~="monaco-editor" i][data-uri*="erl" i] {
         font-feature-settings: "calt" off, "ERLA" on;
     }
 }

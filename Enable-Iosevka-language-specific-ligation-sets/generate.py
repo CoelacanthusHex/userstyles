@@ -8,7 +8,7 @@ from typing import Dict, List, TextIO, Iterable, Optional
 
 header: str = """/* ==UserStyle==
 @name           Enable Iosevka language-specific ligation sets
-@version        1.3.0
+@version        1.4.0
 @description    Enable Iosevka language-specific ligation sets for code elements.
 @namespace      Coelacanthus
 @homepageURL    https://github.com/CoelacanthusHex/userstyles
@@ -266,6 +266,11 @@ def main() -> None:
                 lambda x: f'pre[class~="{x}" i]', lang
             )
             write_rule_with_whole_selectors(file, special_selectors_rustdoc, tag)
+            # https://www.typescriptlang.org/play/?#
+            special_selectors_monaco_editor: Iterable[str] = map(
+                lambda x: f'pre[class~="monaco-editor" i][data-uri*="{x}" i]', lang
+            )
+            write_rule_with_whole_selectors(file, special_selectors_monaco_editor, tag)
         file.write(r"}")
 
 

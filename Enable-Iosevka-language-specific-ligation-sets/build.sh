@@ -1,5 +1,8 @@
 #!/usr/bin/zsh
 
+# SPDX-FileCopyrightText: Coelacanthus
+# SPDX-License-Identifier: MPL-2.0
+
 ruff format generate.py
 ruff check \
     --show-fixes \
