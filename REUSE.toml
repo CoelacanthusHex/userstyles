@@ -1,0 +1,8 @@
+version = 1
+
+[[annotations]]
+path = [
+    "Enable-Iosevka-language-specific-ligation-sets-aux-userscript/**",
+]
+SPDX-FileCopyrightText = "Coelacanthus"
+SPDX-License-Identifier = "MPL-2.0"
