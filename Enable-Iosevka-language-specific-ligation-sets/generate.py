@@ -8,7 +8,7 @@ from typing import Dict, List, TextIO, Iterable, Optional
 
 header: str = """/* ==UserStyle==
 @name           Enable Iosevka language-specific ligation sets
-@version        1.4.0
+@version        1.5.0
 @description    Enable Iosevka language-specific ligation sets for code elements.
 @namespace      Coelacanthus
 @homepageURL    https://github.com/CoelacanthusHex/userstyles
@@ -172,9 +172,10 @@ class_keywords_before: List[str] = [
     # https://github.com/highlightjs/highlight.js/blob/5697ae5187746c24732e62cd625f3f83004a44ce/src/lib/html_renderer.js#L32
     "hljs",
     "hljs-language",
+    # Enlighter
+    "enlighter-l",
 ]
 class_keywords_after: List[str] = [
-    "file-line",
     # https://raku.org/
     "code",
 ]
@@ -185,6 +186,8 @@ attribute_keywords: List[str] = [
     "data-language",
     # MDN
     "language",
+    # Enlighter
+    "data-enlighter-language",
 ]
 combine_classes: List[str] = [
     # highlight.js
@@ -266,6 +269,10 @@ def main() -> None:
                 lambda x: f'pre[class~="{x}" i]', lang
             )
             write_rule_with_whole_selectors(file, special_selectors_rustdoc, tag)
+            special_selectors_zigdoc: Iterable[str] = map(
+                lambda x: f'code[class~="{x}" i], figure:has(.zig-cap) > pre', lang
+            )
+            write_rule_with_whole_selectors(file, special_selectors_zigdoc, tag)
             # https://www.typescriptlang.org/play/?#
             special_selectors_monaco_editor: Iterable[str] = map(
                 lambda x: f'pre[class~="monaco-editor" i][data-uri*="{x}" i]', lang
