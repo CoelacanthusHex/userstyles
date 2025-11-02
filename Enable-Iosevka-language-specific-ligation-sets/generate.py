@@ -4,11 +4,11 @@
 # SPDX-License-Identifier: MPL-2.0
 
 import itertools
-from typing import Dict, List, TextIO, Iterable, Optional
+from typing import Dict, List, Iterable, Optional
 
 header: str = """/* ==UserStyle==
 @name           Enable Iosevka language-specific ligation sets
-@version        1.5.0
+@version        1.6.0
 @description    Enable Iosevka language-specific ligation sets for code elements.
 @namespace      Coelacanthus
 @homepageURL    https://github.com/CoelacanthusHex/userstyles
@@ -18,135 +18,206 @@ header: str = """/* ==UserStyle==
 SPDX-FileCopyrightText: Coelacanthus
 SPDX-License-Identifier: MPL-2.0
 ==/UserStyle== */
+"""
+begin: str = """
 @-moz-document regexp(".*") {
     /* https://github.com/be5invis/Iosevka/blob/main/doc/language-specific-ligation-sets.md */
 """
 
-languages: Dict[str, List[str]] = {
+languages: Dict[str, List[List[str]]] = {
     # FIXME: Don't include Golang because it uses :=.
     "CLIK": [
         # C
-        "c",
+        [
+            "c",
+        ],
         # C++
-        "cpp",
-        "cc",
-        "c++",
-        "h++",
-        "hpp",
-        "hh",
-        "hxx",
-        "cxx",
+        [
+            "cpp",
+            "cc",
+            "c++",
+            "h++",
+            "hpp",
+            "hh",
+            "hxx",
+            "cxx",
+        ],
         # Objective-C/Objecive-C++
-        "objc",
-        "objcpp",
-        "objc++",
+        [
+            "objc",
+            "objcpp",
+            "objc++",
+        ],
         # D
-        "d",
+        [
+            "d",
+        ],
         # Java
-        "java",
+        [
+            "java",
+        ],
         # Kotlin
-        "kotlin",
-        "kt",
-        "kts",
+        [
+            "kotlin",
+            "kt",
+            "kts",
+        ],
         # C#
-        "csharp",
-        "cs",
-        "c#",
+        [
+            "csharp",
+            "cs",
+            "c#",
+        ],
         # Zig
-        "zig",
-        "zir",
+        [
+            "zig",
+            "zir",
+        ],
+        # Rust
+        [
+            "rust",
+            "rs",
+        ],
     ],
     "JSPT": [
         # JavaScript
-        "javascript",
-        "js",
-        "jsx",
-        "mjs",
-        "cjs",
+        [
+            "javascript",
+            "js",
+            "jsx",
+            "mjs",
+            "cjs",
+        ],
         # TypeScript
-        "typescript",
-        "ts",
-        "tsx",
-        "mts",
-        "cts",
+        [
+            "typescript",
+            "ts",
+            "tsx",
+            "mts",
+            "cts",
+        ],
     ],
     "PHPX": [
-        "php",
-        "php3",
-        "php4",
-        "php5",
-        "phpt",
+        [
+            "php",
+            "php3",
+            "php4",
+            "php5",
+            "phpt",
+        ],
     ],
     "JLIA": [
-        "julia",
-        "jl",
+        [
+            "julia",
+            "jl",
+        ],
     ],
     # FIXME: Don't include Perl because it uses <>.
     "RAKU": [
-        "raku",
+        [
+            "raku",
+        ],
     ],
     "MLXX": [
         # ML & SML
-        "sml",
-        "smlnj",
-        "ml",
+        [
+            "sml",
+            "smlnj",
+            "ml",
+        ],
         # OCaml
-        "ocaml",
+        [
+            "ocaml",
+        ],
     ],
     "FSHP": [
-        "fsharp",
-        # FIXME: Is "fs" distinguishable between F# and F*?
-        "fs",
-        "f#",
+        [
+            "fsharp",
+            # FIXME: Is "fs" distinguishable between F# and F*?
+            "fs",
+            "f#",
+        ],
     ],
     "FSTA": [
-        "fstar",
+        [
+            "fstar",
+        ],
     ],
     # FIXME: Don't include Agda because it uses Unicode.
-    "HSKL": ["haskell", "hs", "lhs"],
+    "HSKL": [
+        [
+            "haskell",
+            "hs",
+            "lhs",
+        ],
+    ],
     "IDRS": [
-        "idris",
-        "idr",
+        [
+            "idris",
+            "idr",
+        ],
     ],
     "ELMX": [
-        "elm",
+        [
+            "elm",
+        ],
     ],
     "PURS": [
-        "purescript",
-        "purs",
+        [
+            "purescript",
+            "purs",
+        ],
     ],
     "SWFT": [
-        "swift",
+        [
+            "swift",
+        ],
     ],
     "DFNY": [
-        "dafny",
+        [
+            "dafny",
+        ],
     ],
     "COQX": [
-        "coq",
-        "rocq",
+        [
+            "coq",
+            "rocq",
+        ],
     ],
     "MTLB": [
-        "matlab",
+        [
+            "matlab",
+        ],
     ],
     "VRLG": [
         # Verilog
-        "verilog",
-        "v",
+        [
+            "verilog",
+            "v",
+        ],
         # SystemVerilog
-        "sv",
-        "svh",
+        [
+            "sv",
+            "svh",
+        ],
     ],
     "WFLM": [
         # Mathematica
-        "mathematica",
-        "mma",
+        [
+            "mathematica",
+            "mma",
+        ],
         # Wolfram Language
-        "wolfram",
-        "wl",
+        [
+            "wolfram",
+            "wl",
+        ],
     ],
     "ERLA": [
-        "erlang",
-        "erl",
+        [
+            "erlang",
+            "erl",
+        ],
     ],
     # FIXME: default seems best for Scala.
 }
@@ -203,12 +274,14 @@ combine_classes: List[str] = [
     "brush:",
     # Pandoc
     "sourceCode",
+    # Hackaday
+    "syntaxhighlighter",
 ]
 
 
-def write_rule_for_code_element(
-    file: TextIO, selectors: Iterable[str], tag: str, comment: Optional[str] = None
-) -> None:
+def rule_for_code_element(
+    selectors: Iterable[str], tag: str, comment: Optional[str] = None
+) -> Iterable[str]:
     selector = ", ".join(selectors)
     selectors = [
         f":is({selector}) :is(pre, code, textarea)",
@@ -217,24 +290,26 @@ def write_rule_for_code_element(
     selectors_with_shadowdom = itertools.chain.from_iterable(
         map(lambda x: [f"{x}", f":host {x}"], selectors)
     )
-    write_rule_with_whole_selectors(file, selectors_with_shadowdom, tag, comment)
+    return rule_with_whole_selectors(selectors_with_shadowdom, tag, comment)
 
 
-def write_rule_with_whole_selectors(
-    file: TextIO, selectors: Iterable[str], tag: str, comment: Optional[str] = None
-) -> None:
-    if comment:
-        file.write(f"    /* {comment} */\n")
+def rule_with_whole_selectors(
+    selectors: Iterable[str], tag: str, comment: Optional[str] = None
+) -> Iterable[str]:
     for selector in selectors:
-        file.write(f"    {selector} {{\n")
-        file.write(f'        font-feature-settings: "calt" off, "{tag}" on;\n')
-        file.write("    }\n")
+        r: str = ""
+        if comment:
+            r += f"    /* {comment} */\n"
+        r += f"    {selector} {{\n"
+        r += f'        font-feature-settings: "calt" off, "{tag}" on;\n'
+        r += "    }\n"
+        yield r
 
 
-def main() -> None:
-    with open("Enable-Iosevka-language-specific-ligation-sets.user.css", "w") as file:
-        file.write(header)
-        for tag, lang in languages.items():
+def gen() -> Iterable[str]:
+    yield begin
+    for tag, langs in languages.items():
+        for lang in langs:
             selectors_class_keyword_before: Iterable[str] = map(
                 lambda x: f'[class~="{x}" i]',
                 map(
@@ -256,29 +331,41 @@ def main() -> None:
                 lambda x: f'[class~="{x[0]}" i][class~="{x[1]}" i]',
                 itertools.product(combine_classes, lang),
             )
-            write_rule_for_code_element(file, selectors_class_keyword_before, tag)
-            write_rule_for_code_element(file, selectors_class_keyword_after, tag)
-            write_rule_for_code_element(file, selectors_attribute_keyword, tag)
-            write_rule_for_code_element(file, selectors_combine_class, tag)
+            yield from rule_for_code_element(selectors_class_keyword_before, tag)
+            yield from rule_for_code_element(selectors_class_keyword_after, tag)
+            yield from rule_for_code_element(selectors_attribute_keyword, tag)
+            yield from rule_for_code_element(selectors_combine_class, tag)
 
             special_selectors_gitlab: Iterable[str] = map(
                 lambda x: f'pre[class~="highlight" i] [lang~="{x}" i]', lang
             )
-            write_rule_with_whole_selectors(file, special_selectors_gitlab, tag)
+            yield from rule_with_whole_selectors(special_selectors_gitlab, tag)
             special_selectors_rustdoc: Iterable[str] = map(
                 lambda x: f'pre[class~="{x}" i]', lang
             )
-            write_rule_with_whole_selectors(file, special_selectors_rustdoc, tag)
+            yield from rule_with_whole_selectors(special_selectors_rustdoc, tag)
             special_selectors_zigdoc: Iterable[str] = map(
                 lambda x: f'code[class~="{x}" i], figure:has(.zig-cap) > pre', lang
             )
-            write_rule_with_whole_selectors(file, special_selectors_zigdoc, tag)
+            yield from rule_with_whole_selectors(special_selectors_zigdoc, tag)
             # https://www.typescriptlang.org/play/?#
             special_selectors_monaco_editor: Iterable[str] = map(
                 lambda x: f'pre[class~="monaco-editor" i][data-uri*="{x}" i]', lang
             )
-            write_rule_with_whole_selectors(file, special_selectors_monaco_editor, tag)
-        file.write(r"}")
+            yield from rule_with_whole_selectors(special_selectors_monaco_editor, tag)
+            # https://akrzemi1.wordpress.com/2017/06/28/compile-time-string-concatenation/
+            special_selectors_wordpress: Iterable[str] = map(
+                lambda x: f'td[class~="code" i] code[class~="{x}" i]', lang
+            )
+            yield from rule_with_whole_selectors(special_selectors_wordpress, tag)
+    yield r"}"
+
+
+def main() -> None:
+    with open("Enable-Iosevka-language-specific-ligation-sets.user.css", "w") as file:
+        file.write(header)
+        for r in gen():
+            file.write(r)
 
 
 if __name__ == "__main__":
