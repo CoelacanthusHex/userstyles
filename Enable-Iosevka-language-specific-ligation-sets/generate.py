@@ -8,7 +8,7 @@ from typing import Dict, List, Iterable, Optional
 
 header: str = """/* ==UserStyle==
 @name           Enable Iosevka language-specific ligation sets
-@version        1.6.0
+@version        1.7.0
 @description    Enable Iosevka language-specific ligation sets for code elements.
 @namespace      Coelacanthus
 @homepageURL    https://github.com/CoelacanthusHex/userstyles
@@ -259,6 +259,8 @@ attribute_keywords: List[str] = [
     "language",
     # Enlighter
     "data-enlighter-language",
+    # SearchFox
+    "data-markdown-slug",
 ]
 combine_classes: List[str] = [
     # highlight.js
@@ -276,6 +278,8 @@ combine_classes: List[str] = [
     "sourceCode",
     # Hackaday
     "syntaxhighlighter",
+    # DokuWiki
+    "code",
 ]
 
 
