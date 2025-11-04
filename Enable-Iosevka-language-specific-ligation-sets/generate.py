@@ -6,10 +6,25 @@
 import itertools
 from typing import Dict, List, Iterable, Optional
 
-header: str = """/* ==UserStyle==
+version: str = "1.8.0"
+
+header: str = f"""/* ==UserStyle==
 @name           Enable Iosevka language-specific ligation sets
-@version        1.7.0
+@version        {version}
 @description    Enable Iosevka language-specific ligation sets for code elements.
+@namespace      Coelacanthus
+@homepageURL    https://github.com/CoelacanthusHex/userstyles
+@supportURL     https://github.com/CoelacanthusHex/userstyles/issues
+@author         Coelacanthus
+@license        MPL-2.0
+SPDX-FileCopyrightText: Coelacanthus
+SPDX-License-Identifier: MPL-2.0
+==/UserStyle== */
+"""
+header_txtr: str = f"""/* ==UserStyle==
+@name           Enable Iosevka language-specific ligation sets and texture healing
+@version        {version}
+@description    Enable Iosevka language-specific ligation sets and texture healing for code elements.
 @namespace      Coelacanthus
 @homepageURL    https://github.com/CoelacanthusHex/userstyles
 @supportURL     https://github.com/CoelacanthusHex/userstyles/issues
@@ -284,7 +299,7 @@ combine_classes: List[str] = [
 
 
 def rule_for_code_element(
-    selectors: Iterable[str], tag: str, comment: Optional[str] = None
+    selectors: Iterable[str], tag: str, txtr: bool, comment: Optional[str] = None
 ) -> Iterable[str]:
     selector = ", ".join(selectors)
     selectors = [
@@ -294,24 +309,33 @@ def rule_for_code_element(
     selectors_with_shadowdom = itertools.chain.from_iterable(
         map(lambda x: [f"{x}", f":host {x}"], selectors)
     )
-    return rule_with_whole_selectors(selectors_with_shadowdom, tag, comment)
+    return rule_with_whole_selectors(selectors_with_shadowdom, tag, txtr, comment)
 
 
 def rule_with_whole_selectors(
-    selectors: Iterable[str], tag: str, comment: Optional[str] = None
+    selectors: Iterable[str], tag: str, txtr: bool, comment: Optional[str] = None
 ) -> Iterable[str]:
     for selector in selectors:
         r: str = ""
         if comment:
             r += f"    /* {comment} */\n"
         r += f"    {selector} {{\n"
-        r += f'        font-feature-settings: "calt" off, "{tag}" on;\n'
+        if txtr:
+            r += f'        font-feature-settings: "TXTR" on, "calt" off, "{tag}" on;\n'
+        else:
+            r += f'        font-feature-settings: "calt" off, "{tag}" on;\n'
         r += "    }\n"
         yield r
 
 
-def gen() -> Iterable[str]:
+def gen(txtr: bool) -> Iterable[str]:
     yield begin
+    if txtr:
+        yield """
+    pre, code, .code, samp, kbd, tt, var {
+        font-feature-settings: "TXTR" on;
+    }
+"""
     for tag, langs in languages.items():
         for lang in langs:
             selectors_class_keyword_before: Iterable[str] = map(
@@ -335,40 +359,49 @@ def gen() -> Iterable[str]:
                 lambda x: f'[class~="{x[0]}" i][class~="{x[1]}" i]',
                 itertools.product(combine_classes, lang),
             )
-            yield from rule_for_code_element(selectors_class_keyword_before, tag)
-            yield from rule_for_code_element(selectors_class_keyword_after, tag)
-            yield from rule_for_code_element(selectors_attribute_keyword, tag)
-            yield from rule_for_code_element(selectors_combine_class, tag)
+            yield from rule_for_code_element(selectors_class_keyword_before, tag, txtr)
+            yield from rule_for_code_element(selectors_class_keyword_after, tag, txtr)
+            yield from rule_for_code_element(selectors_attribute_keyword, tag, txtr)
+            yield from rule_for_code_element(selectors_combine_class, tag, txtr)
 
             special_selectors_gitlab: Iterable[str] = map(
                 lambda x: f'pre[class~="highlight" i] [lang~="{x}" i]', lang
             )
-            yield from rule_with_whole_selectors(special_selectors_gitlab, tag)
+            yield from rule_with_whole_selectors(special_selectors_gitlab, tag, txtr)
             special_selectors_rustdoc: Iterable[str] = map(
                 lambda x: f'pre[class~="{x}" i]', lang
             )
-            yield from rule_with_whole_selectors(special_selectors_rustdoc, tag)
+            yield from rule_with_whole_selectors(special_selectors_rustdoc, tag, txtr)
             special_selectors_zigdoc: Iterable[str] = map(
                 lambda x: f'code[class~="{x}" i], figure:has(.zig-cap) > pre', lang
             )
-            yield from rule_with_whole_selectors(special_selectors_zigdoc, tag)
+            yield from rule_with_whole_selectors(special_selectors_zigdoc, tag, txtr)
             # https://www.typescriptlang.org/play/?#
             special_selectors_monaco_editor: Iterable[str] = map(
                 lambda x: f'pre[class~="monaco-editor" i][data-uri*="{x}" i]', lang
             )
-            yield from rule_with_whole_selectors(special_selectors_monaco_editor, tag)
+            yield from rule_with_whole_selectors(
+                special_selectors_monaco_editor, tag, txtr
+            )
             # https://akrzemi1.wordpress.com/2017/06/28/compile-time-string-concatenation/
             special_selectors_wordpress: Iterable[str] = map(
                 lambda x: f'td[class~="code" i] code[class~="{x}" i]', lang
             )
-            yield from rule_with_whole_selectors(special_selectors_wordpress, tag)
+            yield from rule_with_whole_selectors(special_selectors_wordpress, tag, txtr)
     yield r"}"
 
 
 def main() -> None:
     with open("Enable-Iosevka-language-specific-ligation-sets.user.css", "w") as file:
         file.write(header)
-        for r in gen():
+        for r in gen(txtr=False):
+            file.write(r)
+    with open(
+        "Enable-Iosevka-language-specific-ligation-sets-and-texture-healing.user.css",
+        "w",
+    ) as file:
+        file.write(header_txtr)
+        for r in gen(txtr=True):
             file.write(r)
 
 
