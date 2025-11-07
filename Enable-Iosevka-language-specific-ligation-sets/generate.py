@@ -6,7 +6,7 @@
 import itertools
 from typing import Dict, List, Iterable, Optional
 
-version: str = "1.8.0"
+version: str = "1.9.0"
 
 header: str = f"""/* ==UserStyle==
 @name           Enable Iosevka language-specific ligation sets
