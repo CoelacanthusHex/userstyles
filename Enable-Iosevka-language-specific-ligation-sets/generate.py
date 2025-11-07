@@ -288,7 +288,8 @@ combine_classes: List[str] = [
     #        https://github.com/openstyles/stylus/issues/739
     #        https://greasyfork.org/en/scripts/424030-stylus-shadow-dom-support
     #        But all available userscripts failed on Firefox.
-    "brush:",
+    # FIXME: It will be treated pesudo class.
+    #"brush:",
     # Pandoc
     "sourceCode",
     # Hackaday
