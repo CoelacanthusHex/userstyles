@@ -304,7 +304,7 @@ def rule_for_code_element(
     selector = ", ".join(selectors)
     selectors = [
         f":is({selector}) :is(pre, code, textarea)",
-        f":is(pre, code):is({selector})",
+        f":is(pre, code) :is({selector})",
     ]
     selectors_with_shadowdom = itertools.chain.from_iterable(
         map(lambda x: [f"{x}", f":host {x}"], selectors)
