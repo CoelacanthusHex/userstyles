@@ -41,6 +41,7 @@ begin: str = """
 
 languages: Dict[str, List[List[str]]] = {
     # FIXME: Don't include Golang because it uses :=.
+    # TODO: some characters need esacpe, like +/#, see https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/ident
     "CLIK": [
         # C
         [
@@ -50,8 +51,6 @@ languages: Dict[str, List[List[str]]] = {
         [
             "cpp",
             "cc",
-            "c++",
-            "h++",
             "hpp",
             "hh",
             "hxx",
@@ -61,7 +60,6 @@ languages: Dict[str, List[List[str]]] = {
         [
             "objc",
             "objcpp",
-            "objc++",
         ],
         # D
         [
@@ -81,7 +79,6 @@ languages: Dict[str, List[List[str]]] = {
         [
             "csharp",
             "cs",
-            "c#",
         ],
         # Zig
         [
@@ -150,7 +147,6 @@ languages: Dict[str, List[List[str]]] = {
             "fsharp",
             # FIXME: Is "fs" distinguishable between F# and F*?
             "fs",
-            "f#",
         ],
     ],
     "FSTA": [
