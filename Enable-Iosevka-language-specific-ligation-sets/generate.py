@@ -289,7 +289,7 @@ combine_classes: List[str] = [
     #        https://greasyfork.org/en/scripts/424030-stylus-shadow-dom-support
     #        But all available userscripts failed on Firefox.
     # FIXME: It will be treated pesudo class.
-    #"brush:",
+    # "brush:",
     # Pandoc
     "sourceCode",
     # Hackaday
@@ -340,24 +340,24 @@ def gen(txtr: bool) -> Iterable[str]:
     for tag, langs in languages.items():
         for lang in langs:
             selectors_class_keyword_before: Iterable[str] = map(
-                lambda x: f'[class~="{x}" i]',
+                lambda x: f'[class~="{x}"]',
                 map(
                     lambda x: "-".join(x),
                     itertools.product(class_keywords_before, lang),
                 ),
             )
             selectors_class_keyword_after: Iterable[str] = map(
-                lambda x: f'[class~="{x}" i]',
+                lambda x: f'[class~="{x}"]',
                 map(
                     lambda x: "-".join(x), itertools.product(lang, class_keywords_after)
                 ),
             )
             selectors_attribute_keyword: Iterable[str] = map(
-                lambda x: f'[{x[0]}~="{x[1]}" i]',
+                lambda x: f'[{x[0]}~="{x[1]}"]',
                 itertools.product(attribute_keywords, lang),
             )
             selectors_combine_class: Iterable[str] = map(
-                lambda x: f'[class~="{x[0]}" i][class~="{x[1]}" i]',
+                lambda x: f'[class~="{x[0]}"][class~="{x[1]}"]',
                 itertools.product(combine_classes, lang),
             )
             yield from rule_for_code_element(selectors_class_keyword_before, tag, txtr)
@@ -366,27 +366,27 @@ def gen(txtr: bool) -> Iterable[str]:
             yield from rule_for_code_element(selectors_combine_class, tag, txtr)
 
             special_selectors_gitlab: Iterable[str] = map(
-                lambda x: f'pre[class~="highlight" i] [lang~="{x}" i]', lang
+                lambda x: f'pre[class~="highlight"] [lang~="{x}"]', lang
             )
             yield from rule_with_whole_selectors(special_selectors_gitlab, tag, txtr)
             special_selectors_rustdoc: Iterable[str] = map(
-                lambda x: f'pre[class~="{x}" i]', lang
+                lambda x: f'pre[class~="{x}"]', lang
             )
             yield from rule_with_whole_selectors(special_selectors_rustdoc, tag, txtr)
             special_selectors_zigdoc: Iterable[str] = map(
-                lambda x: f'code[class~="{x}" i], figure:has(.zig-cap) > pre', lang
+                lambda x: f'code[class~="{x}"], figure:has(.zig-cap) > pre', lang
             )
             yield from rule_with_whole_selectors(special_selectors_zigdoc, tag, txtr)
             # https://www.typescriptlang.org/play/?#
             special_selectors_monaco_editor: Iterable[str] = map(
-                lambda x: f'pre[class~="monaco-editor" i][data-uri*="{x}" i]', lang
+                lambda x: f'pre[class~="monaco-editor"][data-uri*="{x}"]', lang
             )
             yield from rule_with_whole_selectors(
                 special_selectors_monaco_editor, tag, txtr
             )
             # https://akrzemi1.wordpress.com/2017/06/28/compile-time-string-concatenation/
             special_selectors_wordpress: Iterable[str] = map(
-                lambda x: f'td[class~="code" i] code[class~="{x}" i]', lang
+                lambda x: f'td[class~="code"] code[class~="{x}"]', lang
             )
             yield from rule_with_whole_selectors(special_selectors_wordpress, tag, txtr)
     yield r"}"
