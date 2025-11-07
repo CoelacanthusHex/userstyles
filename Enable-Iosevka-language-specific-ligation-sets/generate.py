@@ -261,10 +261,6 @@ class_keywords_before: List[str] = [
     # Enlighter
     "enlighter-l",
 ]
-class_keywords_after: List[str] = [
-    # https://raku.org/
-    "code",
-]
 attribute_keywords: List[str] = [
     "data-lang",
     # Astro
@@ -346,12 +342,6 @@ def gen(txtr: bool) -> Iterable[str]:
                     itertools.product(class_keywords_before, lang),
                 ),
             )
-            selectors_class_keyword_after: Iterable[str] = map(
-                lambda x: f".{x}",
-                map(
-                    lambda x: "-".join(x), itertools.product(lang, class_keywords_after)
-                ),
-            )
             selectors_attribute_keyword: Iterable[str] = map(
                 lambda x: f'[{x[0]}~="{x[1]}"]',
                 itertools.product(attribute_keywords, lang),
@@ -361,7 +351,6 @@ def gen(txtr: bool) -> Iterable[str]:
                 itertools.product(combine_classes, lang),
             )
             yield from rule_for_code_element(selectors_class_keyword_before, tag, txtr)
-            yield from rule_for_code_element(selectors_class_keyword_after, tag, txtr)
             yield from rule_for_code_element(selectors_attribute_keyword, tag, txtr)
             yield from rule_for_code_element(selectors_combine_class, tag, txtr)
 
@@ -371,8 +360,12 @@ def gen(txtr: bool) -> Iterable[str]:
             yield from rule_with_whole_selectors(special_selectors_gitlab, tag, txtr)
             special_selectors_rustdoc: Iterable[str] = map(lambda x: f"pre.{x}", lang)
             yield from rule_with_whole_selectors(special_selectors_rustdoc, tag, txtr)
+            special_selectors_raku_site: Iterable[str] = map(
+                lambda x: f"div.{x} pre", ["raku"]
+            )
+            yield from rule_with_whole_selectors(special_selectors_raku_site, tag, txtr)
             special_selectors_zigdoc: Iterable[str] = map(
-                lambda x: f"code.{x}, figure:has(.zig-cap) > pre", lang
+                lambda x: f"code.{x}, figure:has(.zig-cap) > pre", ["zig", "zir"]
             )
             yield from rule_with_whole_selectors(special_selectors_zigdoc, tag, txtr)
             # https://www.typescriptlang.org/play/?#
