@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name           Enable Iosevka language-specific ligation sets and texture healing
-@version        1.9.0
+@version        1.10.0
 @description    Enable Iosevka language-specific ligation sets and texture healing for code elements.
 @namespace      Coelacanthus
 @homepageURL    https://github.com/CoelacanthusHex/userstyles
@@ -10,9 +10,7 @@
 SPDX-FileCopyrightText: Coelacanthus
 SPDX-License-Identifier: MPL-2.0
 ==/UserStyle== */
-
 @-moz-document regexp(".*") {
-    /* https://github.com/be5invis/Iosevka/blob/main/doc/language-specific-ligation-sets.md */
 
     pre, code, .code, samp, kbd, tt, var {
         font-feature-settings: "TXTR" on;
@@ -57,15 +55,6 @@ SPDX-License-Identifier: MPL-2.0
         font-feature-settings: "TXTR" on, "calt" off, "CLIK" on;
     }
     pre.c {
-        font-feature-settings: "TXTR" on, "calt" off, "CLIK" on;
-    }
-    div.raku pre {
-        font-feature-settings: "TXTR" on, "calt" off, "CLIK" on;
-    }
-    code.zig, figure:has(.zig-cap) > pre {
-        font-feature-settings: "TXTR" on, "calt" off, "CLIK" on;
-    }
-    code.zir, figure:has(.zig-cap) > pre {
         font-feature-settings: "TXTR" on, "calt" off, "CLIK" on;
     }
     pre.monaco-editor[data-uri*="c"] {
@@ -144,15 +133,6 @@ SPDX-License-Identifier: MPL-2.0
         font-feature-settings: "TXTR" on, "calt" off, "CLIK" on;
     }
     pre.cxx {
-        font-feature-settings: "TXTR" on, "calt" off, "CLIK" on;
-    }
-    div.raku pre {
-        font-feature-settings: "TXTR" on, "calt" off, "CLIK" on;
-    }
-    code.zig, figure:has(.zig-cap) > pre {
-        font-feature-settings: "TXTR" on, "calt" off, "CLIK" on;
-    }
-    code.zir, figure:has(.zig-cap) > pre {
         font-feature-settings: "TXTR" on, "calt" off, "CLIK" on;
     }
     pre.monaco-editor[data-uri*="cpp"] {
@@ -239,15 +219,6 @@ SPDX-License-Identifier: MPL-2.0
     pre.objcpp {
         font-feature-settings: "TXTR" on, "calt" off, "CLIK" on;
     }
-    div.raku pre {
-        font-feature-settings: "TXTR" on, "calt" off, "CLIK" on;
-    }
-    code.zig, figure:has(.zig-cap) > pre {
-        font-feature-settings: "TXTR" on, "calt" off, "CLIK" on;
-    }
-    code.zir, figure:has(.zig-cap) > pre {
-        font-feature-settings: "TXTR" on, "calt" off, "CLIK" on;
-    }
     pre.monaco-editor[data-uri*="objc"] {
         font-feature-settings: "TXTR" on, "calt" off, "CLIK" on;
     }
@@ -302,15 +273,6 @@ SPDX-License-Identifier: MPL-2.0
     pre.d {
         font-feature-settings: "TXTR" on, "calt" off, "CLIK" on;
     }
-    div.raku pre {
-        font-feature-settings: "TXTR" on, "calt" off, "CLIK" on;
-    }
-    code.zig, figure:has(.zig-cap) > pre {
-        font-feature-settings: "TXTR" on, "calt" off, "CLIK" on;
-    }
-    code.zir, figure:has(.zig-cap) > pre {
-        font-feature-settings: "TXTR" on, "calt" off, "CLIK" on;
-    }
     pre.monaco-editor[data-uri*="d"] {
         font-feature-settings: "TXTR" on, "calt" off, "CLIK" on;
     }
@@ -357,15 +319,6 @@ SPDX-License-Identifier: MPL-2.0
         font-feature-settings: "TXTR" on, "calt" off, "CLIK" on;
     }
     pre.java {
-        font-feature-settings: "TXTR" on, "calt" off, "CLIK" on;
-    }
-    div.raku pre {
-        font-feature-settings: "TXTR" on, "calt" off, "CLIK" on;
-    }
-    code.zig, figure:has(.zig-cap) > pre {
-        font-feature-settings: "TXTR" on, "calt" off, "CLIK" on;
-    }
-    code.zir, figure:has(.zig-cap) > pre {
         font-feature-settings: "TXTR" on, "calt" off, "CLIK" on;
     }
     pre.monaco-editor[data-uri*="java"] {
@@ -426,15 +379,6 @@ SPDX-License-Identifier: MPL-2.0
         font-feature-settings: "TXTR" on, "calt" off, "CLIK" on;
     }
     pre.kts {
-        font-feature-settings: "TXTR" on, "calt" off, "CLIK" on;
-    }
-    div.raku pre {
-        font-feature-settings: "TXTR" on, "calt" off, "CLIK" on;
-    }
-    code.zig, figure:has(.zig-cap) > pre {
-        font-feature-settings: "TXTR" on, "calt" off, "CLIK" on;
-    }
-    code.zir, figure:has(.zig-cap) > pre {
         font-feature-settings: "TXTR" on, "calt" off, "CLIK" on;
     }
     pre.monaco-editor[data-uri*="kotlin"] {
@@ -503,15 +447,6 @@ SPDX-License-Identifier: MPL-2.0
     pre.cs {
         font-feature-settings: "TXTR" on, "calt" off, "CLIK" on;
     }
-    div.raku pre {
-        font-feature-settings: "TXTR" on, "calt" off, "CLIK" on;
-    }
-    code.zig, figure:has(.zig-cap) > pre {
-        font-feature-settings: "TXTR" on, "calt" off, "CLIK" on;
-    }
-    code.zir, figure:has(.zig-cap) > pre {
-        font-feature-settings: "TXTR" on, "calt" off, "CLIK" on;
-    }
     pre.monaco-editor[data-uri*="csharp"] {
         font-feature-settings: "TXTR" on, "calt" off, "CLIK" on;
     }
@@ -572,15 +507,6 @@ SPDX-License-Identifier: MPL-2.0
     pre.zir {
         font-feature-settings: "TXTR" on, "calt" off, "CLIK" on;
     }
-    div.raku pre {
-        font-feature-settings: "TXTR" on, "calt" off, "CLIK" on;
-    }
-    code.zig, figure:has(.zig-cap) > pre {
-        font-feature-settings: "TXTR" on, "calt" off, "CLIK" on;
-    }
-    code.zir, figure:has(.zig-cap) > pre {
-        font-feature-settings: "TXTR" on, "calt" off, "CLIK" on;
-    }
     pre.monaco-editor[data-uri*="zig"] {
         font-feature-settings: "TXTR" on, "calt" off, "CLIK" on;
     }
@@ -639,15 +565,6 @@ SPDX-License-Identifier: MPL-2.0
         font-feature-settings: "TXTR" on, "calt" off, "CLIK" on;
     }
     pre.rs {
-        font-feature-settings: "TXTR" on, "calt" off, "CLIK" on;
-    }
-    div.raku pre {
-        font-feature-settings: "TXTR" on, "calt" off, "CLIK" on;
-    }
-    code.zig, figure:has(.zig-cap) > pre {
-        font-feature-settings: "TXTR" on, "calt" off, "CLIK" on;
-    }
-    code.zir, figure:has(.zig-cap) > pre {
         font-feature-settings: "TXTR" on, "calt" off, "CLIK" on;
     }
     pre.monaco-editor[data-uri*="rust"] {
@@ -726,15 +643,6 @@ SPDX-License-Identifier: MPL-2.0
         font-feature-settings: "TXTR" on, "calt" off, "JSPT" on;
     }
     pre.cjs {
-        font-feature-settings: "TXTR" on, "calt" off, "JSPT" on;
-    }
-    div.raku pre {
-        font-feature-settings: "TXTR" on, "calt" off, "JSPT" on;
-    }
-    code.zig, figure:has(.zig-cap) > pre {
-        font-feature-settings: "TXTR" on, "calt" off, "JSPT" on;
-    }
-    code.zir, figure:has(.zig-cap) > pre {
         font-feature-settings: "TXTR" on, "calt" off, "JSPT" on;
     }
     pre.monaco-editor[data-uri*="javascript"] {
@@ -833,15 +741,6 @@ SPDX-License-Identifier: MPL-2.0
     pre.cts {
         font-feature-settings: "TXTR" on, "calt" off, "JSPT" on;
     }
-    div.raku pre {
-        font-feature-settings: "TXTR" on, "calt" off, "JSPT" on;
-    }
-    code.zig, figure:has(.zig-cap) > pre {
-        font-feature-settings: "TXTR" on, "calt" off, "JSPT" on;
-    }
-    code.zir, figure:has(.zig-cap) > pre {
-        font-feature-settings: "TXTR" on, "calt" off, "JSPT" on;
-    }
     pre.monaco-editor[data-uri*="typescript"] {
         font-feature-settings: "TXTR" on, "calt" off, "JSPT" on;
     }
@@ -938,15 +837,6 @@ SPDX-License-Identifier: MPL-2.0
     pre.phpt {
         font-feature-settings: "TXTR" on, "calt" off, "PHPX" on;
     }
-    div.raku pre {
-        font-feature-settings: "TXTR" on, "calt" off, "PHPX" on;
-    }
-    code.zig, figure:has(.zig-cap) > pre {
-        font-feature-settings: "TXTR" on, "calt" off, "PHPX" on;
-    }
-    code.zir, figure:has(.zig-cap) > pre {
-        font-feature-settings: "TXTR" on, "calt" off, "PHPX" on;
-    }
     pre.monaco-editor[data-uri*="php"] {
         font-feature-settings: "TXTR" on, "calt" off, "PHPX" on;
     }
@@ -1025,15 +915,6 @@ SPDX-License-Identifier: MPL-2.0
     pre.jl {
         font-feature-settings: "TXTR" on, "calt" off, "JLIA" on;
     }
-    div.raku pre {
-        font-feature-settings: "TXTR" on, "calt" off, "JLIA" on;
-    }
-    code.zig, figure:has(.zig-cap) > pre {
-        font-feature-settings: "TXTR" on, "calt" off, "JLIA" on;
-    }
-    code.zir, figure:has(.zig-cap) > pre {
-        font-feature-settings: "TXTR" on, "calt" off, "JLIA" on;
-    }
     pre.monaco-editor[data-uri*="julia"] {
         font-feature-settings: "TXTR" on, "calt" off, "JLIA" on;
     }
@@ -1086,15 +967,6 @@ SPDX-License-Identifier: MPL-2.0
         font-feature-settings: "TXTR" on, "calt" off, "RAKU" on;
     }
     pre.raku {
-        font-feature-settings: "TXTR" on, "calt" off, "RAKU" on;
-    }
-    div.raku pre {
-        font-feature-settings: "TXTR" on, "calt" off, "RAKU" on;
-    }
-    code.zig, figure:has(.zig-cap) > pre {
-        font-feature-settings: "TXTR" on, "calt" off, "RAKU" on;
-    }
-    code.zir, figure:has(.zig-cap) > pre {
         font-feature-settings: "TXTR" on, "calt" off, "RAKU" on;
     }
     pre.monaco-editor[data-uri*="raku"] {
@@ -1157,15 +1029,6 @@ SPDX-License-Identifier: MPL-2.0
     pre.ml {
         font-feature-settings: "TXTR" on, "calt" off, "MLXX" on;
     }
-    div.raku pre {
-        font-feature-settings: "TXTR" on, "calt" off, "MLXX" on;
-    }
-    code.zig, figure:has(.zig-cap) > pre {
-        font-feature-settings: "TXTR" on, "calt" off, "MLXX" on;
-    }
-    code.zir, figure:has(.zig-cap) > pre {
-        font-feature-settings: "TXTR" on, "calt" off, "MLXX" on;
-    }
     pre.monaco-editor[data-uri*="sml"] {
         font-feature-settings: "TXTR" on, "calt" off, "MLXX" on;
     }
@@ -1226,15 +1089,6 @@ SPDX-License-Identifier: MPL-2.0
     pre.ocaml {
         font-feature-settings: "TXTR" on, "calt" off, "MLXX" on;
     }
-    div.raku pre {
-        font-feature-settings: "TXTR" on, "calt" off, "MLXX" on;
-    }
-    code.zig, figure:has(.zig-cap) > pre {
-        font-feature-settings: "TXTR" on, "calt" off, "MLXX" on;
-    }
-    code.zir, figure:has(.zig-cap) > pre {
-        font-feature-settings: "TXTR" on, "calt" off, "MLXX" on;
-    }
     pre.monaco-editor[data-uri*="ocaml"] {
         font-feature-settings: "TXTR" on, "calt" off, "MLXX" on;
     }
@@ -1289,15 +1143,6 @@ SPDX-License-Identifier: MPL-2.0
     pre.fs {
         font-feature-settings: "TXTR" on, "calt" off, "FSHP" on;
     }
-    div.raku pre {
-        font-feature-settings: "TXTR" on, "calt" off, "FSHP" on;
-    }
-    code.zig, figure:has(.zig-cap) > pre {
-        font-feature-settings: "TXTR" on, "calt" off, "FSHP" on;
-    }
-    code.zir, figure:has(.zig-cap) > pre {
-        font-feature-settings: "TXTR" on, "calt" off, "FSHP" on;
-    }
     pre.monaco-editor[data-uri*="fsharp"] {
         font-feature-settings: "TXTR" on, "calt" off, "FSHP" on;
     }
@@ -1350,15 +1195,6 @@ SPDX-License-Identifier: MPL-2.0
         font-feature-settings: "TXTR" on, "calt" off, "FSTA" on;
     }
     pre.fstar {
-        font-feature-settings: "TXTR" on, "calt" off, "FSTA" on;
-    }
-    div.raku pre {
-        font-feature-settings: "TXTR" on, "calt" off, "FSTA" on;
-    }
-    code.zig, figure:has(.zig-cap) > pre {
-        font-feature-settings: "TXTR" on, "calt" off, "FSTA" on;
-    }
-    code.zir, figure:has(.zig-cap) > pre {
         font-feature-settings: "TXTR" on, "calt" off, "FSTA" on;
     }
     pre.monaco-editor[data-uri*="fstar"] {
@@ -1419,15 +1255,6 @@ SPDX-License-Identifier: MPL-2.0
         font-feature-settings: "TXTR" on, "calt" off, "HSKL" on;
     }
     pre.lhs {
-        font-feature-settings: "TXTR" on, "calt" off, "HSKL" on;
-    }
-    div.raku pre {
-        font-feature-settings: "TXTR" on, "calt" off, "HSKL" on;
-    }
-    code.zig, figure:has(.zig-cap) > pre {
-        font-feature-settings: "TXTR" on, "calt" off, "HSKL" on;
-    }
-    code.zir, figure:has(.zig-cap) > pre {
         font-feature-settings: "TXTR" on, "calt" off, "HSKL" on;
     }
     pre.monaco-editor[data-uri*="haskell"] {
@@ -1496,15 +1323,6 @@ SPDX-License-Identifier: MPL-2.0
     pre.idr {
         font-feature-settings: "TXTR" on, "calt" off, "IDRS" on;
     }
-    div.raku pre {
-        font-feature-settings: "TXTR" on, "calt" off, "IDRS" on;
-    }
-    code.zig, figure:has(.zig-cap) > pre {
-        font-feature-settings: "TXTR" on, "calt" off, "IDRS" on;
-    }
-    code.zir, figure:has(.zig-cap) > pre {
-        font-feature-settings: "TXTR" on, "calt" off, "IDRS" on;
-    }
     pre.monaco-editor[data-uri*="idris"] {
         font-feature-settings: "TXTR" on, "calt" off, "IDRS" on;
     }
@@ -1557,15 +1375,6 @@ SPDX-License-Identifier: MPL-2.0
         font-feature-settings: "TXTR" on, "calt" off, "ELMX" on;
     }
     pre.elm {
-        font-feature-settings: "TXTR" on, "calt" off, "ELMX" on;
-    }
-    div.raku pre {
-        font-feature-settings: "TXTR" on, "calt" off, "ELMX" on;
-    }
-    code.zig, figure:has(.zig-cap) > pre {
-        font-feature-settings: "TXTR" on, "calt" off, "ELMX" on;
-    }
-    code.zir, figure:has(.zig-cap) > pre {
         font-feature-settings: "TXTR" on, "calt" off, "ELMX" on;
     }
     pre.monaco-editor[data-uri*="elm"] {
@@ -1622,15 +1431,6 @@ SPDX-License-Identifier: MPL-2.0
     pre.purs {
         font-feature-settings: "TXTR" on, "calt" off, "PURS" on;
     }
-    div.raku pre {
-        font-feature-settings: "TXTR" on, "calt" off, "PURS" on;
-    }
-    code.zig, figure:has(.zig-cap) > pre {
-        font-feature-settings: "TXTR" on, "calt" off, "PURS" on;
-    }
-    code.zir, figure:has(.zig-cap) > pre {
-        font-feature-settings: "TXTR" on, "calt" off, "PURS" on;
-    }
     pre.monaco-editor[data-uri*="purescript"] {
         font-feature-settings: "TXTR" on, "calt" off, "PURS" on;
     }
@@ -1685,15 +1485,6 @@ SPDX-License-Identifier: MPL-2.0
     pre.swift {
         font-feature-settings: "TXTR" on, "calt" off, "SWFT" on;
     }
-    div.raku pre {
-        font-feature-settings: "TXTR" on, "calt" off, "SWFT" on;
-    }
-    code.zig, figure:has(.zig-cap) > pre {
-        font-feature-settings: "TXTR" on, "calt" off, "SWFT" on;
-    }
-    code.zir, figure:has(.zig-cap) > pre {
-        font-feature-settings: "TXTR" on, "calt" off, "SWFT" on;
-    }
     pre.monaco-editor[data-uri*="swift"] {
         font-feature-settings: "TXTR" on, "calt" off, "SWFT" on;
     }
@@ -1740,15 +1531,6 @@ SPDX-License-Identifier: MPL-2.0
         font-feature-settings: "TXTR" on, "calt" off, "DFNY" on;
     }
     pre.dafny {
-        font-feature-settings: "TXTR" on, "calt" off, "DFNY" on;
-    }
-    div.raku pre {
-        font-feature-settings: "TXTR" on, "calt" off, "DFNY" on;
-    }
-    code.zig, figure:has(.zig-cap) > pre {
-        font-feature-settings: "TXTR" on, "calt" off, "DFNY" on;
-    }
-    code.zir, figure:has(.zig-cap) > pre {
         font-feature-settings: "TXTR" on, "calt" off, "DFNY" on;
     }
     pre.monaco-editor[data-uri*="dafny"] {
@@ -1805,15 +1587,6 @@ SPDX-License-Identifier: MPL-2.0
     pre.rocq {
         font-feature-settings: "TXTR" on, "calt" off, "COQX" on;
     }
-    div.raku pre {
-        font-feature-settings: "TXTR" on, "calt" off, "COQX" on;
-    }
-    code.zig, figure:has(.zig-cap) > pre {
-        font-feature-settings: "TXTR" on, "calt" off, "COQX" on;
-    }
-    code.zir, figure:has(.zig-cap) > pre {
-        font-feature-settings: "TXTR" on, "calt" off, "COQX" on;
-    }
     pre.monaco-editor[data-uri*="coq"] {
         font-feature-settings: "TXTR" on, "calt" off, "COQX" on;
     }
@@ -1868,15 +1641,6 @@ SPDX-License-Identifier: MPL-2.0
     pre.matlab {
         font-feature-settings: "TXTR" on, "calt" off, "MTLB" on;
     }
-    div.raku pre {
-        font-feature-settings: "TXTR" on, "calt" off, "MTLB" on;
-    }
-    code.zig, figure:has(.zig-cap) > pre {
-        font-feature-settings: "TXTR" on, "calt" off, "MTLB" on;
-    }
-    code.zir, figure:has(.zig-cap) > pre {
-        font-feature-settings: "TXTR" on, "calt" off, "MTLB" on;
-    }
     pre.monaco-editor[data-uri*="matlab"] {
         font-feature-settings: "TXTR" on, "calt" off, "MTLB" on;
     }
@@ -1929,15 +1693,6 @@ SPDX-License-Identifier: MPL-2.0
         font-feature-settings: "TXTR" on, "calt" off, "VRLG" on;
     }
     pre.v {
-        font-feature-settings: "TXTR" on, "calt" off, "VRLG" on;
-    }
-    div.raku pre {
-        font-feature-settings: "TXTR" on, "calt" off, "VRLG" on;
-    }
-    code.zig, figure:has(.zig-cap) > pre {
-        font-feature-settings: "TXTR" on, "calt" off, "VRLG" on;
-    }
-    code.zir, figure:has(.zig-cap) > pre {
         font-feature-settings: "TXTR" on, "calt" off, "VRLG" on;
     }
     pre.monaco-editor[data-uri*="verilog"] {
@@ -2000,15 +1755,6 @@ SPDX-License-Identifier: MPL-2.0
     pre.svh {
         font-feature-settings: "TXTR" on, "calt" off, "VRLG" on;
     }
-    div.raku pre {
-        font-feature-settings: "TXTR" on, "calt" off, "VRLG" on;
-    }
-    code.zig, figure:has(.zig-cap) > pre {
-        font-feature-settings: "TXTR" on, "calt" off, "VRLG" on;
-    }
-    code.zir, figure:has(.zig-cap) > pre {
-        font-feature-settings: "TXTR" on, "calt" off, "VRLG" on;
-    }
     pre.monaco-editor[data-uri*="sv"] {
         font-feature-settings: "TXTR" on, "calt" off, "VRLG" on;
     }
@@ -2067,15 +1813,6 @@ SPDX-License-Identifier: MPL-2.0
         font-feature-settings: "TXTR" on, "calt" off, "WFLM" on;
     }
     pre.mma {
-        font-feature-settings: "TXTR" on, "calt" off, "WFLM" on;
-    }
-    div.raku pre {
-        font-feature-settings: "TXTR" on, "calt" off, "WFLM" on;
-    }
-    code.zig, figure:has(.zig-cap) > pre {
-        font-feature-settings: "TXTR" on, "calt" off, "WFLM" on;
-    }
-    code.zir, figure:has(.zig-cap) > pre {
         font-feature-settings: "TXTR" on, "calt" off, "WFLM" on;
     }
     pre.monaco-editor[data-uri*="mathematica"] {
@@ -2138,15 +1875,6 @@ SPDX-License-Identifier: MPL-2.0
     pre.wl {
         font-feature-settings: "TXTR" on, "calt" off, "WFLM" on;
     }
-    div.raku pre {
-        font-feature-settings: "TXTR" on, "calt" off, "WFLM" on;
-    }
-    code.zig, figure:has(.zig-cap) > pre {
-        font-feature-settings: "TXTR" on, "calt" off, "WFLM" on;
-    }
-    code.zir, figure:has(.zig-cap) > pre {
-        font-feature-settings: "TXTR" on, "calt" off, "WFLM" on;
-    }
     pre.monaco-editor[data-uri*="wolfram"] {
         font-feature-settings: "TXTR" on, "calt" off, "WFLM" on;
     }
@@ -2207,15 +1935,6 @@ SPDX-License-Identifier: MPL-2.0
     pre.erl {
         font-feature-settings: "TXTR" on, "calt" off, "ERLA" on;
     }
-    div.raku pre {
-        font-feature-settings: "TXTR" on, "calt" off, "ERLA" on;
-    }
-    code.zig, figure:has(.zig-cap) > pre {
-        font-feature-settings: "TXTR" on, "calt" off, "ERLA" on;
-    }
-    code.zir, figure:has(.zig-cap) > pre {
-        font-feature-settings: "TXTR" on, "calt" off, "ERLA" on;
-    }
     pre.monaco-editor[data-uri*="erlang"] {
         font-feature-settings: "TXTR" on, "calt" off, "ERLA" on;
     }
@@ -2227,5 +1946,66 @@ SPDX-License-Identifier: MPL-2.0
     }
     td.code code.erl {
         font-feature-settings: "TXTR" on, "calt" off, "ERLA" on;
+    }
+}
+@-moz-document domain("raku.org") {
+    div.raku pre {
+        font-feature-settings: "TXTR" on, "calt" off, "RAKU" on;
+    }
+}
+@-moz-document domain("ziglang.org") {
+    code.zig, figure:has(.zig-cap) > pre {
+        font-feature-settings: "TXTR" on, "calt" off, "CLIK" on;
+    }
+    code.zir, figure:has(.zig-cap) > pre {
+        font-feature-settings: "TXTR" on, "calt" off, "CLIK" on;
+    }
+    code.zig, figure:has(.zig-cap) > pre {
+        font-feature-settings: "TXTR" on, "calt" off, "CLIK" on;
+    }
+    code.zir, figure:has(.zig-cap) > pre {
+        font-feature-settings: "TXTR" on, "calt" off, "CLIK" on;
+    }
+    code.zig, figure:has(.zig-cap) > pre {
+        font-feature-settings: "TXTR" on, "calt" off, "CLIK" on;
+    }
+    code.zir, figure:has(.zig-cap) > pre {
+        font-feature-settings: "TXTR" on, "calt" off, "CLIK" on;
+    }
+    code.zig, figure:has(.zig-cap) > pre {
+        font-feature-settings: "TXTR" on, "calt" off, "CLIK" on;
+    }
+    code.zir, figure:has(.zig-cap) > pre {
+        font-feature-settings: "TXTR" on, "calt" off, "CLIK" on;
+    }
+    code.zig, figure:has(.zig-cap) > pre {
+        font-feature-settings: "TXTR" on, "calt" off, "CLIK" on;
+    }
+    code.zir, figure:has(.zig-cap) > pre {
+        font-feature-settings: "TXTR" on, "calt" off, "CLIK" on;
+    }
+    code.zig, figure:has(.zig-cap) > pre {
+        font-feature-settings: "TXTR" on, "calt" off, "CLIK" on;
+    }
+    code.zir, figure:has(.zig-cap) > pre {
+        font-feature-settings: "TXTR" on, "calt" off, "CLIK" on;
+    }
+    code.zig, figure:has(.zig-cap) > pre {
+        font-feature-settings: "TXTR" on, "calt" off, "CLIK" on;
+    }
+    code.zir, figure:has(.zig-cap) > pre {
+        font-feature-settings: "TXTR" on, "calt" off, "CLIK" on;
+    }
+    code.zig, figure:has(.zig-cap) > pre {
+        font-feature-settings: "TXTR" on, "calt" off, "CLIK" on;
+    }
+    code.zir, figure:has(.zig-cap) > pre {
+        font-feature-settings: "TXTR" on, "calt" off, "CLIK" on;
+    }
+    code.zig, figure:has(.zig-cap) > pre {
+        font-feature-settings: "TXTR" on, "calt" off, "CLIK" on;
+    }
+    code.zir, figure:has(.zig-cap) > pre {
+        font-feature-settings: "TXTR" on, "calt" off, "CLIK" on;
     }
 }

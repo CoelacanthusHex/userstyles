@@ -4,9 +4,9 @@
 # SPDX-License-Identifier: MPL-2.0
 
 import itertools
-from typing import Dict, List, Iterable, Optional
+from typing import Dict, List, Iterable, Optional, TextIO, Callable
 
-version: str = "1.9.0"
+version: str = "1.10.0"
 
 header: str = f"""/* ==UserStyle==
 @name           Enable Iosevka language-specific ligation sets
@@ -33,10 +33,6 @@ header_txtr: str = f"""/* ==UserStyle==
 SPDX-FileCopyrightText: Coelacanthus
 SPDX-License-Identifier: MPL-2.0
 ==/UserStyle== */
-"""
-begin: str = """
-@-moz-document regexp(".*") {
-    /* https://github.com/be5invis/Iosevka/blob/main/doc/language-specific-ligation-sets.md */
 """
 
 languages: Dict[str, List[List[str]]] = {
@@ -321,8 +317,25 @@ def rule_with_whole_selectors(
         yield r
 
 
-def gen(txtr: bool) -> Iterable[str]:
-    yield begin
+def gen_for_regex(regex: str, rules: Iterable[str]) -> Iterable[str]:
+    yield f'@-moz-document regexp("{regex}") {{\n'
+    yield from rules
+    yield "}\n"
+
+
+def gen_for_domains(domains: Iterable[str], rules: Iterable[str]) -> Iterable[str]:
+    yield r"@-moz-document "
+    yield from map(lambda domain: f'domain("{domain}") ', domains)
+    yield "{\n"
+    yield from rules
+    yield "}\n"
+
+
+def gen_for_domain(domain: str, rules: Iterable[str]) -> Iterable[str]:
+    yield from gen_for_domains([domain], rules)
+
+
+def gen_global_rule(txtr: bool) -> Iterable[str]:
     if txtr:
         yield """
     pre, code, .code, samp, kbd, tt, var {
@@ -356,14 +369,6 @@ def gen(txtr: bool) -> Iterable[str]:
             yield from rule_with_whole_selectors(special_selectors_gitlab, tag, txtr)
             special_selectors_rustdoc: Iterable[str] = map(lambda x: f"pre.{x}", lang)
             yield from rule_with_whole_selectors(special_selectors_rustdoc, tag, txtr)
-            special_selectors_raku_site: Iterable[str] = map(
-                lambda x: f"div.{x} pre", ["raku"]
-            )
-            yield from rule_with_whole_selectors(special_selectors_raku_site, tag, txtr)
-            special_selectors_zigdoc: Iterable[str] = map(
-                lambda x: f"code.{x}, figure:has(.zig-cap) > pre", ["zig", "zir"]
-            )
-            yield from rule_with_whole_selectors(special_selectors_zigdoc, tag, txtr)
             # https://www.typescriptlang.org/play/?#
             special_selectors_monaco_editor: Iterable[str] = map(
                 lambda x: f'pre.monaco-editor[data-uri*="{x}"]', lang
@@ -376,21 +381,46 @@ def gen(txtr: bool) -> Iterable[str]:
                 lambda x: f"td.code code.{x}", lang
             )
             yield from rule_with_whole_selectors(special_selectors_wordpress, tag, txtr)
-    yield r"}"
+
+
+def gen_site_rule(
+    selector: Callable[[List[str]], Iterable[str]], tag: str, txtr: bool
+) -> Iterable[str]:
+    for lang in languages[tag]:
+        yield from rule_with_whole_selectors(selector(lang), tag, txtr)
+
+
+def write_file(file: TextIO, txtr: bool) -> None:
+    for r in gen_for_regex(r".*", gen_global_rule(txtr=txtr)):
+        file.write(r)
+        special_selectors_raku_site: Callable[[List[str]], Iterable[str]] = (
+            lambda lang: map(lambda x: f"div.{x} pre", ["raku"])
+        )
+        special_selectors_zigdoc: Callable[[List[str]], Iterable[str]] = (
+            lambda lang: map(
+                lambda x: f"code.{x}, figure:has(.zig-cap) > pre", ["zig", "zir"]
+            )
+        )
+    for r in gen_for_domain(
+        r"raku.org", gen_site_rule(special_selectors_raku_site, "RAKU", txtr=txtr)
+    ):
+        file.write(r)
+    for r in gen_for_domain(
+        r"ziglang.org", gen_site_rule(special_selectors_zigdoc, "CLIK", txtr=txtr)
+    ):
+        file.write(r)
 
 
 def main() -> None:
     with open("Enable-Iosevka-language-specific-ligation-sets.user.css", "w") as file:
         file.write(header)
-        for r in gen(txtr=False):
-            file.write(r)
+        write_file(file, False)
     with open(
         "Enable-Iosevka-language-specific-ligation-sets-and-texture-healing.user.css",
         "w",
     ) as file:
         file.write(header_txtr)
-        for r in gen(txtr=True):
-            file.write(r)
+        write_file(file, True)
 
 
 if __name__ == "__main__":
